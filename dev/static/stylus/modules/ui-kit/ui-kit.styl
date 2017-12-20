@@ -7,9 +7,7 @@
     & > .like-h2
       margin-bottom 30px
 
-
-
- // Текст
+// Текст
 .like-h1
   display inline-block
   color red
@@ -116,25 +114,24 @@
     path
       transition fill linear .3s
 
-
   &_white
 
     &:hover
       svg path
-        fill red!important
+        fill red !important
 
     svg path
-      fill white!important
+      fill white !important
 
   &_red-hover
     svg path
-      fill red!important
+      fill red !important
 
     &:hover
       background-color red
 
       svg path
-        fill white!important
+        fill white !important
 
   &_down
     background-color white
@@ -143,11 +140,10 @@
       background-color red
 
       svg path
-        fill white!important
+        fill white !important
 
     svg
       transform rotate(90deg)
-
 
 .pain
   display inline-block
@@ -177,4 +173,44 @@
 
   &:hover
     svg path
-      fill red!important
+      fill red !important
+
+.menu
+
+  a
+    color inherit
+
+  &__item
+    margin-bottom 19px
+    padding-left 0
+    transition all linear .3s
+    color white
+
+    &:hover
+      padding-left 8px
+      color red
+      @extend .museo-500
+
+.contact-line
+
+  &__line
+    display block
+    height 1px
+    width 100%
+    background-color gray2
+    position relative
+    top 17px
+
+  &__link
+    position relative
+    padding-right 15px
+    background-color black
+    z-index 1
+    @extend .like-h6
+    text-decoration: underline
+    transition all linear .3s
+
+    &:hover
+      color red
+
+
