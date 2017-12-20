@@ -91,3 +91,90 @@
     width 250px
     background-image url('../img/svg/label_2.svg')
 
+.arrow
+  display inline-block
+  position relative
+  cursor pointer
+  width 40px
+  height 40px
+  border-radius 20px
+  background-color transparent
+  transition background-color linear .3s
+
+  &:hover
+    background-color white
+
+  svg
+    width 14px
+    height 11px
+    position absolute
+    top 50%
+    margin-top -6.5px
+    left 50%
+    margin-left -7px
+
+    path
+      transition fill linear .3s
+
+
+  &_white
+
+    &:hover
+      svg path
+        fill red!important
+
+    svg path
+      fill white!important
+
+  &_red-hover
+    svg path
+      fill red!important
+
+    &:hover
+      background-color red
+
+      svg path
+        fill white!important
+
+  &_down
+    background-color white
+
+    &:hover
+      background-color red
+
+      svg path
+        fill white!important
+
+    svg
+      transform rotate(90deg)
+
+
+.pain
+  display inline-block
+  cursor pointer
+  width 28px
+  height 29px
+  background-image url('../img/svg/icon_price_cross.svg');
+  background-size cover
+  opacity .5
+  transition opacity linear .3s
+
+  &:hover
+    opacity 1
+
+.refresh
+  display inline-block
+  cursor pointer
+  width 25px
+  height 20px
+
+  svg
+    width 25px
+    height 20px
+
+    path
+      transition fill linear .3s
+
+  &:hover
+    svg path
+      fill red!important
