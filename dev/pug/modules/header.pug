@@ -1,0 +1,55 @@
+header.header
+    .container
+        .header__items
+            .header__item.header__item_address.item
+                .item__label
+                    span.like-h6 Адрес
+                .item__value
+                    span.like-h5
+                        | Архангельск
+                        br
+                        | пр. Ломоносова, 209, 1 этаж
+            .header__item.header__item_contacts.item
+                .item__label
+                    span.like-h6 Контакты
+                .item__value
+                    span.like-h5
+                        a(href='tel:+79600153130') +7 (960) 015 31 30
+                        br
+                        a(href='mailto:info@idoctor.ru') info@idoctor.ru
+            .header__item.header__item_hours.item
+                .item__label
+                    span.like-h6 Режим работы
+                .item__value
+                    span.like-h5
+                        | Ежедневно
+                        br
+                        | 10 — 19
+            .header__item.header__item_search.item
+                .item__value
+                    a(href='#').js-show-header-search-bar
+                        include ../../static/img/svg/icon_search.svg
+            .header__item.header__item_price.item
+                .item__label
+                    span.like-h6 Главный вопрос
+                .item__value
+                    .btn Стоимость
+        .header__line
+            .contact-line
+                .contact-line__line
+                a(href='#').contact-line__link Как к нам проехать?
+                .contact-line__social.social
+                    .social__item.social__item_vk
+                        a(href='#')
+                            include ../../static/img/svg/icon_socials_vk.svg
+                    .social__item.social__item_instagram
+                        a(href='#')
+                            include ../../static/img/svg/icon_social_instagram.svg
+        .header__search.search.js-header-search-bar
+            .search__hint
+                span.like-h6 Что ищем?
+            .serach__field
+                .input.input_btn
+                    input(type='text' placeholder='Плохо держит заряд как исправить').input__field
+                    button(href='#').input__btn
+                        include ../../static/img/svg/icon_search.svg

@@ -69,30 +69,58 @@ block content
 
         .menu
             .menu__item
-                a(href="#") Стоимость
+                a(href='#') Стоимость
             .menu__item
-                a(href="#") Акция дня
+                a(href='#') Акция дня
             .menu__item
-                a(href="#") Сервис
+                a(href='#') Сервис
             .menu__item
-                a(href="#") Услуги Plus
+                a(href='#') Услуги Plus
             .menu__item
-                a(href="#") Отзывы
+                a(href='#') Отзывы
             .menu__item
-                a(href="#") Партнёры
+                a(href='#') Партнёры
             .menu__item
-                a(href="#") Контакты
+                a(href='#') Контакты
 
         br
 
         div
             .contact-line
                 .contact-line__line
-                a(href="#").contact-line__link Как к нам проехать?
+                a(href='#').contact-line__link Как к нам проехать?
                 .contact-line__social.social
-                    .social__item
-                        a(href='#') vk
-                    .social__item
-                        a(href='#') instagram
+                    .social__item.social__item_vk
+                        a(href='#')
+                            include ../../static/img/svg/icon_socials_vk.svg
+                    .social__item.social__item_instagram
+                        a(href='#')
+                            include ../../static/img/svg/icon_social_instagram.svg
 
 
+        div.search-right.search
+            .search__icon
+                include ../../static/img/svg/icon_search.svg
+
+        .input
+            input(type='text').input__field
+        .input.input_btn
+            input(type='text').input__field
+            button(href='#').input__btn
+                include ../../static/img/svg/icon_arrow.svg
+
+
+        div
+            .toggler.js-toggler-type(data-value='ipad')
+                .toggler__back
+                .toggler__items
+                    span.toggler__item(data-value='iphone') iPhone
+                    span.toggler__item(data-value='ipad') iPad
+
+            .toggler.toggler_model.js-toggler-model(data-value='6')
+                .toggler__back
+                .toggler__items
+                    span.toggler__item(data-value='5') 5
+                    span.toggler__item(data-value='6') 6
+                    span.toggler__item(data-value='7') 7
+                    span.toggler__item(data-value='8') 8

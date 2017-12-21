@@ -5,3 +5,48 @@ block variables
 	- var pageClass = 'index-page'
 
 block content
+
+	section.main
+		.main__back
+		.main__content
+			.main__description
+				.main__logo
+					img(src='../../static/img/svg/idoctor_logo_white.svg')
+				.main__heading
+					span.like-h1 Экспресс-ремонт
+					span.like-h2 iPhone / iPad в Архангельске
+					.refresh
+						include ../../static/img/svg/icon_refresh.svg
+					p.like-h5
+						| Демократичный экспресс сервис Вашей техники Apple уже сегодня.
+						br
+						| iDoctor — это не только быстрое и качественное исполнение,
+						br
+						| но и гарантия качества на каждую услугу от 3 месяцев.
+
+			.main__menu
+				.menu
+					.menu__item
+						a(href="#") Стоимость
+					.menu__item
+						a(href="#") Акция дня
+					.menu__item
+						a(href="#") Сервис
+					.menu__item
+						a(href="#") Услуги Plus
+					.menu__item
+						a(href="#") Отзывы
+					.menu__item
+						a(href="#") Партнёры
+					.menu__item
+						a(href="#") Контакты
+
+
+		.main__down
+			.arrow.arrow_down
+				include ../../static/img/svg/icon_arrow.svg
+
+	section.price
+
+
+	a(href="ui-kit.html") UI-kit

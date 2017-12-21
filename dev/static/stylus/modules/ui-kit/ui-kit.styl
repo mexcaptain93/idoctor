@@ -1,6 +1,4 @@
 .ui-kit
-  .container
-    padding-top 130px
 
   section
     margin-bottom 40px
@@ -8,45 +6,45 @@
       margin-bottom 30px
 
 // Текст
+
+a
+  color white
+  text-decoration none
+  transition color linear .3s
+
+  &:hover
+    color red
+
 .like-h1
-  display inline-block
   color red
   @extend .museo-900
   font-size 36px
   line-height 39px
 
 .like-h2
-  display inline-block
   color white
   @extend .museo-500
   font-size 36px
   line-height 39px
 
 .like-h3
-  display inline-block
   color white
   @extend .museo-900
   font-size 24px
   line-height 24px
 
 .like-h4
-  display inline-block
   color white
   font-size 16px
   @extend .museo-500
 
-  &_red
-    display inline-block
-    color red
 
 .like-h5
-  display inline-block
   color white
   @extend .museo-300
   font-size 16px
 
 .like-h6
-  display inline-block
   color gray2
   @extend .museo-100
   font-size 13px
@@ -54,6 +52,7 @@
 // Элементы
 .btn
   display inline-block
+  user-select none
   cursor pointer
   width 180px
   height 40px
@@ -73,6 +72,7 @@
 
 .lbl
   display inline-block
+  user-select none
   width 150px
   height 36px
   background-image url('../img/svg/label_1.svg')
@@ -159,7 +159,6 @@
     opacity 1
 
 .refresh
-  display inline-block
   cursor pointer
   width 25px
   height 20px
@@ -177,11 +176,8 @@
 
 .menu
 
-  a
-    color inherit
-
   &__item
-    margin-bottom 19px
+    margin-bottom 16px
     padding-left 0
     transition all linear .3s
     color white
@@ -191,7 +187,10 @@
       color red
       @extend .museo-500
 
+
 .contact-line
+  position relative
+  user-select none
 
   &__line
     display block
@@ -213,4 +212,126 @@
     &:hover
       color red
 
+  &__social
+    position absolute
+    top 5px
+    right 21px
+    background-color black
+    padding 0 9px
 
+  .social
+
+    &__item
+      display inline-block
+      vertical-align middle
+
+      a
+        display inline-block
+        max-height 100%
+        max-width 100%
+
+      svg path
+        fill gray2!important
+        transition fill linear .3s
+
+      &:hover
+        svg path
+          fill red!important
+
+      &_vk
+        margin-right 6px
+
+        svg, a
+          width 21px
+          height 13px
+
+      &_instagram
+
+        svg, a
+          width 16px
+          height 16px
+
+
+
+.input
+  position: relative
+  display inline-block
+  width 240px
+
+  &__field
+    width 100%
+    height 40px
+    border none
+    border-radius 20px
+    @extend .like-h4
+    color gray2
+    padding 7px 20px
+    caret-color red
+
+    &:active, &:focus
+      color black
+
+  &__btn
+    background none
+    border none
+    width 14px
+    height 11px
+    cursor pointer
+    padding 5px
+    box-sizing content-box
+    position absolute
+    top 50%
+    margin-top -8px
+    right 12px
+  &_btn
+
+    input
+      padding-right 40px
+
+    svg
+      width 14px
+      height 11px
+      position absolute
+      top 50%
+      margin-top -6.5px
+      right 5px
+
+      path
+        fill red!important
+
+
+.toggler
+  position relative
+  width 200px
+  height 40px
+  border-radius 20px
+  display inline-block
+  background-color gray3
+  font-size 0
+  user-select none
+
+  &__back
+    position absolute
+    background linear-gradient(90deg, red_dark, red)
+    width 50%
+    height 40px
+    border-radius 20px
+    transition left linear .3s
+
+  &__items
+    display flex
+    justify-content space-around
+
+  &__item
+    cursor pointer
+    text-align center
+    @extend .like-h4
+    line-height 40px
+    position relative
+    z-index 1
+
+  &_model
+    width 160px
+
+    .toggler__back
+      width 25%
