@@ -27,19 +27,19 @@ block content
 			.main__menu
 				.menu
 					.menu__item
-						a(href="#") Стоимость
+						a(href='#') Стоимость
 					.menu__item
-						a(href="#") Акция дня
+						a(href='#') Акция дня
 					.menu__item
-						a(href="#") Сервис
+						a(href='#') Сервис
 					.menu__item
-						a(href="#") Услуги Plus
+						a(href='#') Услуги Plus
 					.menu__item
-						a(href="#") Отзывы
+						a(href='#') Отзывы
 					.menu__item
-						a(href="#") Партнёры
+						a(href='#') Партнёры
 					.menu__item
-						a(href="#") Контакты
+						a(href='#') Контакты
 
 
 		.main__down
@@ -47,6 +47,74 @@ block content
 				include ../../static/img/svg/icon_arrow.svg
 
 	section.price
+		.price__device.device
+			.device__type
+				span.like-h6 Девайс
+				.toggler.js-toggler-type(data-value='ipad')
+					.toggler__back
+					.toggler__items
+						span.toggler__item(data-value='iphone') iPhone
+						span.toggler__item(data-value='ipad') iPad
+			.device__model
+				span.like-h6 Модель
+				.toggler.toggler_model.js-toggler-model(data-value='6')
+					.toggler__back
+					.toggler__items
+						span.toggler__item(data-value='5') 5
+						span.toggler__item(data-value='6') 6
+						span.toggler__item(data-value='7') 7
+						span.toggler__item(data-value='8') 8
 
 
-	a(href="ui-kit.html") UI-kit
+
+
+		.price__diagnosis.diagnosis
+			.diagnosis__hint.hint
+				.hint__top
+					span.like-h1 Где болит?
+					span.like-h5
+						| Просто наведите на маркер,
+						br
+						| и мы определим вашу проблему,
+						br
+						| а также оценим стоимость
+				.hint__bottom
+					span.like-h5
+						| Затрудняетесь с определением неисправности?
+						.bold Поможем!
+					.input.input_btn
+						input(type='text').input__field
+						button(href='#').input__btn
+							include ../../static/img/svg/icon_arrow.svg
+			.diagnosis__phone.phone
+				.phone__image
+					img(src='../../static/img/general/1_price_iphone.png')
+					a(href='#' data-name='Замена камеры' data-time='30 минут' data-price='777 руб.').pain.pain_1.js-pain
+					a(href='#' data-name='Ремонт механических кнопок' data-time='1 час' data-price='666 руб.').pain.pain_2.js-pain
+					a(href='#' data-name='Восстановление после попадания влаги' data-time='20 минут' data-price='5555 руб.').pain.pain_3.js-pain
+					a(href='#' data-name='Замена аккумулятора' data-time='50 минут' data-price='1000 руб.').pain.pain_4.js-pain
+					a(href='#' data-name='Замена кнопки TouchID' data-time='40 минут' data-price='100 руб.').pain.pain_5.js-pain
+					a(href='#' data-name='Замена разъема' data-time='20 минут' data-price='231 руб.').pain.pain_6.js-pain
+					a(href='#' data-name='Замена экрана с тачскрином' data-time='60 минут' data-price='1234 руб.').pain.pain_7.js-pain
+			.diagnosis__result.result
+				.result__top
+					span.like-h3.js-diagnosis-name Восстановление после попадания влаги
+					.result__time-price
+						.result__time
+							span.like-h6 Время ремонта от:
+							span.like-h3.js-diagnosis-time 30 минут
+						.result__price
+							span.like-h6 Стоимость от:
+							span.like-h3.js-diagnosis-price 999 руб.
+				.result__bottom
+					.show-price
+						.show-price__icon
+							include ../../static/img/svg/icon_show_price.svg
+						.show-price__text
+							a(href='#').like-h4 Открыть полный прайс
+							span.like-h6 14 позиций
+					span.like-h6
+						| В стоимость ремонта входит:
+						br
+						| работа + комплектующие
+	a(href='ui-kit.html') UI-kit
