@@ -197,6 +197,7 @@
                 left 229px
 
 .action-day
+  margin-bottom 124px
 
   &__container
     position relative
@@ -271,3 +272,105 @@
     &_next
       bottom -5px
       left 44px
+
+.defects
+
+  &__back
+    position absolute
+    top 0
+    height 670px
+    left 0
+    right 0
+    background-image url('../img/general/2_popular_back_pic.jpg')
+    filter grayscale(0.2) opacity(0.1)
+    background-size 100%
+    background-repeat no-repeat
+    background-position center
+
+  &__title
+    text-align center
+    margin-bottom 23px
+
+  &__description
+    text-align center
+    margin-bottom 55px
+
+  &__popular
+    max-width 800px
+    margin 0 auto
+    display flex
+    flex-wrap wrap
+    margin-bottom 45px
+
+
+  &__all
+    display none
+
+  &__all-wrap
+    max-width 800px
+    margin 0 auto
+    display flex
+    flex-wrap wrap
+    margin-bottom 45px
+
+  .defect
+    width 31.4%
+    font-size 0;
+    margin-bottom 15px
+
+    &__icon
+      display inline-block
+      vertical-align middle
+      text-align center
+      line-height 34px
+      height 34px
+      width 37px
+      margin-right 12px
+
+      img
+        max-height 100%
+        max-width 100%
+
+    &__name
+      display inline-block
+      vertical-align middle
+
+
+
+  &__actions
+    text-align right
+    padding-right 166px
+
+    .actions
+
+      &__btn
+        margin-right 77px
+
+        &:hover
+          color white
+
+      &__repair
+        position relative
+        color red
+        display inline-block
+        border-bottom 1px solid red
+        line-height 17px
+
+        &::after
+          content ''
+          background-image: url('../img/svg/icon_arrow_link.svg');
+          background-size contain
+          background-repeat no-repeat
+          width 13px
+          height 13px
+          transform rotate(-90deg)
+          display inline-block
+          position absolute
+          top 1px
+          right -22px
+          transition all .3s linear
+
+        &.opened
+          &::after
+            transform rotate(90deg)
+            top 6px
