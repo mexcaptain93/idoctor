@@ -311,7 +311,7 @@
 
   .defect
     width 31.4%
-    font-size 0;
+    font-size 0
     margin-bottom 15px
 
     &__icon
@@ -356,7 +356,7 @@
 
         &::after
           content ''
-          background-image: url('../img/svg/icon_arrow_link.svg');
+          background-image url('../img/svg/icon_arrow_link.svg')
           background-size contain
           background-repeat no-repeat
           width 13px
@@ -412,8 +412,8 @@
 
   &__slider
     position relative
-    top: 0
-    height: 273px;
+    top 0
+    height 273px
     outline none
 
   &__item
@@ -444,8 +444,8 @@
       position relative
 
       img
-        position: absolute;
-        left: -33px;
+        position absolute
+        left -40px
 
 
   &__arrow
@@ -466,12 +466,26 @@
 
 .reviews
   width 750px
-  margin 0 auto
+  margin 0 auto 45px
+
+
+  &__list
+    outline none
+    margin-bottom 37px
+
+  &__wrap
+    width 750px
+    padding 0 10px
+
+  &__item
+    outline none
+
 
   &__heading
     display flex
     justify-content space-between
-    margin-bottom 30px
+    margin-bottom 25px
+    width 690px
 
   .heading
 
@@ -486,7 +500,43 @@
 
   &__photo
     text-align center
+    margin-left 15px
+    margin-top 5px
 
     img
       max-width 100px
       max-height 100px
+
+
+
+  &__arrow
+    display block!important
+    position absolute
+    cursor pointer
+    z-index 2
+
+    &_prev
+      transform rotate(180deg)
+      top 29px
+      left 258px
+
+    &_next
+      top 35px
+      left 421px
+
+  &__ask-link
+    text-align center
+
+    &:hover
+
+      a
+        text-decoration: none
+
+    a
+      color red
+      text-decoration underline
+      transition .3s linear text-decoration
+
+    img
+      margin-right 5px
+      width 20px
