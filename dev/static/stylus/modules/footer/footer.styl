@@ -1,2 +1,52 @@
 footer
   flex 0 0 auto
+
+.footer
+  z-index 1
+
+  .container
+    position relative
+
+  &__items
+    display flex
+    justify-content space-between
+    margin-bottom 10px
+
+  &__item
+
+    .item
+
+      &__label
+        margin-bottom 12px
+
+    &_search
+      width 82px
+      position relative
+
+    &_price
+      width 180px
+
+    &_address
+      .item__value
+        span
+          user-select auto
+
+    &_contacts
+      .item__value
+        *
+          user-select auto
+
+  &__line
+    height 25px
+
+  &__copyright
+    display flex
+    margin-bottom 10px
+
+    .copyright
+
+      &__copy
+        margin-right 20px
+
+      &__dates
+        margin-right 120px

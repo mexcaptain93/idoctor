@@ -17,7 +17,6 @@
 
       &__label
         margin-bottom 12px
-        user-select none
 
     &_search
       width 82px
@@ -34,8 +33,16 @@
         height 14px
 
 
-    &_hours
-      user-select none
+    &_address
+
+      .item__value
+        span
+          user-select all
+
+    &_contacts
+      .item__value
+        *
+          user-select auto
 
     &_price
       width 180px
