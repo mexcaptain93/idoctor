@@ -546,9 +546,78 @@
   margin-top: 60px
 
   &__wrap
+    position relative
     width 100%
     height 230px
     background-image url('../img/general/1_map.png')
     background-repeat no-repeat
     background-size cover
     border-radius 10px
+
+  &__pin
+    position absolute
+    top 99px
+    left 428px
+    width 40px
+    height 40px
+    border-radius 20px
+    background-color red
+    background-image url('../img/svg/icon_map_placeholder.svg')
+    background-size 13px
+    background-repeat no-repeat
+    background-position center center
+
+  &__info
+    cursor pointer
+    position absolute
+    top 99px
+    left 472px
+    width 40px
+    height 40px
+    border-radius 20px
+    background-color white
+    background-image url('../img/svg/icon_map_info.svg')
+    background-size 8px
+    background-position center center
+    background-repeat no-repeat
+
+    &:hover
+
+      & + .map__content
+        display block
+
+  &__content
+    display none
+    position absolute
+    top 0
+    right 0
+    width 392px
+    height 100%
+    background-image url('../img/general/map_content_bg.png')
+
+
+  .content
+
+    &__wrap
+      display flex
+      flex-direction column
+      justify-content center
+      height 100%
+      margin-left 162px
+      padding-top 7px
+
+    &__block
+
+      &:first-child
+        margin-bottom 11px
+
+
+      span
+        display: block
+
+        &.like-h6
+          color black
+          margin-bottom: 3px
+
+        &.like-h4
+          color red
