@@ -1,0 +1,44 @@
+.defect-detail
+
+  .defect
+    margin 57px 0
+    max-width 620px
+
+    &__name
+      margin-bottom 23px
+
+    &__text
+      line-height 19px
+      margin-bottom 52px
+
+      p
+        text-indent 34px
+
+    &__bottom
+      display flex
+      justify-content space-between
+      align-items baseline
+
+    &__read-more
+      position relative
+      color red
+      display inline-block
+      border-bottom 1px solid red
+      line-height 17px
+
+      &::after
+        content ''
+        background-image url('../img/svg/icon_arrow_link.svg')
+        background-size contain
+        background-repeat no-repeat
+        width 13px
+        height 13px
+        transform rotate(-90deg)
+        display inline-block
+        position absolute
+        top 1px
+        right -22px
+        transition all .3s linear
+
+      a
+        color red
