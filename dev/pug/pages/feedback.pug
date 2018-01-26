@@ -1,0 +1,31 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Обратная связь'
+    - var pageClass = 'feedback'
+
+block content
+
+    .feedback
+        .feedback__back
+        .feedback__name
+            span.like-h1 Просто напишите нам
+        .feedback__text
+            p Не знаете или сомневаетесь в цене ремонта вашего девайса?
+            p За вас это сделаем мы. Быстро и максимально точно!
+        .feedback__form.form
+            .form__item
+                .form__label
+                    span.like-h6 Меня зовут:
+                .form__input
+                    .input
+                        input(type='text').input__field
+            .form__item
+                .form__label
+                    span.like-h6 Позвоните на этот номер:
+                .form__input
+                    .input
+                        input(type='text' placeholder='+7').input__field
+            .form__item
+                .btn Отправить
+
