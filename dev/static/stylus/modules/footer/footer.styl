@@ -1,18 +1,54 @@
-footer
-  flex 0 0 auto
-
 .footer
   z-index 1
+  position relative
+  flex 0 0 auto
 
   .container
     position relative
+
+    @media mobile
+      padding 0 15px
+
+  &__back
+    display none
+
+    @media mobile
+      display block
+      position absolute
+      top 0
+      left 0
+      bottom 0
+      right 0
+      background-image url('../img/general/1_welcome_back_pic.jpg')
+      filter grayscale(0.2) opacity(0.1)
+      background-size 160%
+      background-position top
+      background-repeat no-repeat
+
 
   &__items
     display flex
     justify-content space-between
     margin-bottom 10px
 
+    @media mobile
+      flex-direction column
+      align-items center
+      text-align center
+      border-top 1px solid gray2
+      padding-top 30px
+      margin-bottom 43px
+      position relative
+      z-index 1
+
   &__item
+
+    @media mobile
+      margin-bottom 26px
+
+    &:last-child
+      @media mobile
+        margin-bottom 0
 
     .item
 
@@ -22,6 +58,9 @@ footer
     &_search
       width 82px
       position relative
+
+      @media mobile
+        margin-bottom 0
 
     &_price
       width 180px
@@ -39,14 +78,81 @@ footer
   &__line
     height 25px
 
+    @media mobile
+      display none
+      position relative
+      z-index 1
+
   &__copyright
     display flex
     margin-bottom 10px
+
+    @media mobile
+      display block
+      font-size 0
+      margin-bottom 20px
+      position relative
+      z-index 1
 
     .copyright
 
       &__copy
         margin-right 20px
 
+        @media mobile
+          display inline-block
+          width 50%
+          margin-right 0
+          text-align right
+          padding-right 17px
+
       &__dates
         margin-right 120px
+
+        @media mobile
+          display inline-block
+          width 50%
+          margin-right 0
+          text-align left
+          padding-left 4px
+
+      &__text
+
+        @media mobile
+          display block
+          margin 10px auto 0 auto
+          text-align center
+          width 200px
+
+  &__social-mobile
+    display none
+
+    @media mobile
+      display block
+      font-size 0
+      margin-bottom 30px
+      position relative
+      z-index 1
+
+    .social-mobile
+
+      &__item
+        display inline-block
+        vertical-align middle
+        width 50%
+
+        &_vk
+          text-align right
+          padding-right 41px
+
+          svg, a
+            width 21px
+            height 13px
+
+        &_instagram
+          text-align left
+          padding-left 42px
+
+          svg, a
+            width 16px
+            height 16px
