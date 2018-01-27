@@ -1,0 +1,76 @@
+.price-table
+
+  .price
+    margin 57px 0
+    max-width 773px
+    position relative
+
+    &__back
+      position absolute
+      top -257px
+      height 670px
+      left -250px
+      right 0
+      background-image url('../img/general/1_welcome_back_pic.jpg')
+      filter grayscale(0.2) opacity(0.1)
+
+    &__name
+      margin-bottom 23px
+
+    &__text
+      display flex
+      justify-content space-between
+      margin-bottom 65px
+
+      .text__hint
+        color gray2
+
+    &__table
+      display table
+      width 100%
+      margin-bottom 31px
+      z-index 1
+      position relative
+
+      .table
+
+        &__row
+          display table-row
+
+        &__cell
+          display table-cell
+          padding-bottom 16px
+
+          &_num
+            width 52px
+
+          &_price
+            width 150px
+            @extend .museo-500
+
+          &_red
+
+            span
+              color red
+
+        &__text
+          display flex
+          align-items flex-end
+          padding-right 18px
+
+          span
+            margin-right 8px
+
+          &::after
+            content ''
+            flex-grow 1
+            border-bottom 2px dotted gray2
+            margin-bottom 5px
+
+
+    &__bottom
+      display flex
+      justify-content space-between
+      width 607px
+      z-index 1
+      position relative
