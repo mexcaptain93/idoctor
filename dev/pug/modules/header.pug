@@ -54,29 +54,34 @@ header.header
                     button(href='#').input__btn
                         include ../../static/img/svg/icon_search.svg
 header.header-mobile
-    .header-mobile__logo
-        img(src='static/img/svg/idoctor_logo_white.svg')
-    .header-mobile__burger
+    .header-mobile__top
+        .header-mobile__logo
+            img(src='static/img/svg/idoctor_logo_white.svg')
+        .header-mobile__burger.burger.js-open-mobile-menu
+            a(href='#')
+                .burger__item
+                .burger__item
+                .burger__item
     .header-mobile__contacts
-        span пр. Ломоносова, 209, 1 этаж
-        a(href='tel:+79600153130') +7 (960) 015 31 30
+        span.like-h5 пр. Ломоносова, 209, 1 этаж
+        a(href='tel:+79600153130').like-h5 +7 (960) 015 31 30
 
-    .header-mobile__menu.menu
+    .header-mobile__menu.menu.js-mobile-menu
         .menu__list
             .menu__item
-                a(href='#') Стоимость
+                a(href='#').like-h5 Стоимость
             .menu__item
-                a(href='#') Акция дня
+                a(href='#').like-h5 Акция дня
             .menu__item
-                a(href='#') Сервис
+                a(href='#').like-h5 Сервис
             .menu__item
-                a(href='#') Услуги Plus
+                a(href='#').like-h5 Услуги Plus
             .menu__item
-                a(href='#') Отзывы
+                a(href='#').like-h5 Отзывы
             .menu__item
-                a(href='#') Партнёры
+                a(href='#').like-h5 Партнёры
             .menu__item
-                a(href='#') Контакты
+                a(href='#').like-h5 Контакты
         .menu__search
             .input.input_btn
                 input(type='text' placeholder='Поиск').input__field
