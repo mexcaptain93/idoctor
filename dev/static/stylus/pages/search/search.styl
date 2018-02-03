@@ -14,11 +14,25 @@
       background-image url('../img/general/1_welcome_back_pic.jpg')
       filter grayscale(0.2) opacity(0.1)
 
+      @media mobile
+        background-size 160%
+        top -537px
+        height 670px
+        left -162px
+
     &__heading
       margin-bottom 49px
 
+      @media mobile
+        text-align center
+        width 200px
+        margin 0 auto 48px auto
+
       .like-h1
         color white
+
+        @media mobile
+          color red
 
     &__list
       margin-bottom 95px
@@ -33,12 +47,19 @@
       text-transform uppercase
       margin-bottom 10px
 
+      @media mobile
+        padding-left 5px
+        margin-bottom 17px
+
       .like-h3
         font-size 16px
 
     &__text
       text-indent 34px
       margin-bottom 21px
+
+      @media mobile
+        text-indent 41px
 
     &__read-more
       display block
@@ -67,20 +88,50 @@
     &__heading
       margin-bottom 16px
 
+      @media mobile
+        text-align center
+
     &__text
       margin-bottom 87px
+
+      @media mobile
+        margin-bottom 30px
 
     &__form
       display flex
       align-items flex-end
+
+      @media mobile
+        display block
 
     .form
 
       &__item
         margin-right: 8px
 
+        @media mobile
+          margin-right 0
+          margin-bottom 5px
+
         &:last-child
           margin-right 0
 
+          @media mobile
+            text-align center
+            margin-top 60px
+
+
+
+
       &__label
         margin-bottom 8px
+
+        @media mobile
+          margin-bottom 5px
+
+      &__input
+
+        .input
+
+          @media mobile
+            width 100%
