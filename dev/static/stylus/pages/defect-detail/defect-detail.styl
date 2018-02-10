@@ -5,6 +5,9 @@
     max-width 620px
     position relative
 
+    @media mobile
+      max-width 100%
+
     &__back
       position absolute
       top -257px
@@ -14,8 +17,17 @@
       background-image url('../img/general/1_welcome_back_pic.jpg')
       filter grayscale(0.2) opacity(0.1)
 
+      @media mobile
+        background-size 160%
+        top -537px
+        height 670px
+        left -162px
+
     &__name
       margin-bottom 23px
+
+      @media mobile
+        text-align center
 
     &__text
       line-height 19px
@@ -29,12 +41,19 @@
       justify-content space-between
       align-items baseline
 
+      @media mobile
+        flex-direction column
+        align-items center
+
     &__read-more
       position relative
       color red
       display inline-block
       border-bottom 1px solid red
       line-height 17px
+
+      @media mobile
+        margin-bottom 55px
 
       &::after
         content ''
@@ -52,3 +71,13 @@
 
       a
         color red
+
+    &__order
+
+      .btn
+
+        @media mobile
+          width 220px
+          height 48px
+          font-size 12px
+          line-height 48px
