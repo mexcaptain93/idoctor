@@ -14,16 +14,59 @@
       background-image url('../img/general/1_welcome_back_pic.jpg')
       filter grayscale(0.2) opacity(0.1)
 
+      @media mobile
+        background-size 160%
+        top -537px
+        height 670px
+        left -162px
+
     &__name
       margin-bottom 23px
+
+      @media mobile
+        text-align center
+        margin-bottom 18px
 
     &__text
       display flex
       justify-content space-between
       margin-bottom 65px
 
-      .text__hint
-        color gray2
+      @media mobile
+        flex-direction column
+        text-align center
+        align-items center
+        margin-bottom 49px
+
+      .text
+
+        &__main
+
+          @media mobile
+            margin-bottom 20px
+
+        &__hint
+          color gray2
+
+          @media mobile
+            @extend .like-h6
+            width 200px
+
+          br
+
+            @media mobile
+              content ' '
+
+            &::after
+
+              @media mobile
+                content ' '
+
+
+      p
+
+        @media mobile
+          display inline
 
     &__table
       display table
@@ -32,21 +75,38 @@
       z-index 1
       position relative
 
+      @media mobile
+        margin-bottom 8px
+
       .table
 
         &__row
           display table-row
 
+          @media mobile
+            display block
+            margin-bottom 17px
+
         &__cell
           display table-cell
           padding-bottom 16px
 
+          @media mobile
+            display block
+            padding-bottom 0
+
           &_num
             width 52px
+
+            @media mobile
+              display none
 
           &_price
             width 150px
             @extend .museo-500
+
+            @media mobile
+              color red
 
           &_red
 
@@ -67,6 +127,10 @@
             border-bottom 2px dotted gray2
             margin-bottom 5px
 
+            @media mobile
+              display none
+
+
 
     &__bottom
       display flex
@@ -74,3 +138,22 @@
       width 607px
       z-index 1
       position relative
+
+      @media mobile
+        flex-direction column
+        width auto
+
+    &__download
+      margin-bottom 27px
+
+
+    &__order
+      text-align center
+
+      .btn
+
+        @media mobile
+          width 220px
+          height 48px
+          font-size 12px
+          line-height 48px

@@ -358,10 +358,18 @@ a
 .show-price
   display flex
 
+  @media mobile
+    flex-direction column
+    align-items center
+
   &__icon
     width 29px
     height 37px
     margin-right 20px
+
+    @media mobile
+      margin-right 0
+      margin-bottom 18px
 
     svg
       max-width 100%
@@ -369,6 +377,9 @@ a
 
   &__text
     padding-top 2px
+
+    @media mobile
+      text-align center
 
     .like-h4
       display block
