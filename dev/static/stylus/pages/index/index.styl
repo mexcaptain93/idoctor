@@ -3,6 +3,9 @@
   .main
     padding-top 57px
 
+    @media mobile
+      padding-top 0
+
     &__content
       display flex
       justify-content space-between
@@ -11,6 +14,9 @@
     &__description
       z-index 1
       width 530px
+
+      @media mobile
+        width auto
 
     &__back
       position absolute
@@ -21,11 +27,20 @@
       background-image url('../img/general/1_welcome_back_pic.jpg')
       filter grayscale(0.2) opacity(0.1)
 
+      @media mobile
+        background-size 160%
+        top -529px
+        height 670px
+        left -162px
+
 
     &__logo
       width 120px
       height 24px
       margin-bottom 55px
+
+      @media mobile
+        display none
 
       img
         max-width 100%
@@ -33,6 +48,7 @@
 
     &__heading
       user-select none
+      text-align center
 
       p
         color gray2
@@ -41,22 +57,37 @@
         margin-bottom 3px
         display block
 
+        @media mobile
+          margin-bottom 4px
+
       .like-h2
         display inline-block
         vertical-align middle
         margin-right 10px
 
+        @media mobile
+          font-size 30px
+          line-height 30px
+          margin-right 0
+
       .refresh
         display inline-block
+        display none
         vertical-align middle
 
       .like-h5
         margin-top 18px
 
+        @media mobile
+          margin-top 24px
+
 
     &__menu
       z-index 1
       width 180px
+
+      @media mobile
+        display none
 
     &__down
       display block
