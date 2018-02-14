@@ -103,7 +103,7 @@ function sliders() {
         '</i>',
     });
     $('.js-additional-service').slick({
-        autoplay: true,
+        autoplay: false,
         nextArrow: '<i class="additional-service__arrow additional-service__arrow_next">' +
         '<div class="arrow arrow_red-hover">\n' +
         '  <svg width="33.518211mm" height="26.823923mm" viewBox="0 0 33.518211 26.823923" version="1.1" id="svg21">\n' +

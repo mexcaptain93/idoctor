@@ -592,6 +592,10 @@
 .additional-service
   margin-bottom 96px
 
+  @media mobile
+    margin-left -15px
+    margin-right -15px
+
   &__container
     position relative
     max-width 900px
@@ -599,6 +603,10 @@
     background white
     border-radius 10px
     padding 34px 47px
+
+    @media mobile
+      padding 66px 23px
+      height auto
 
   &__back
     position absolute
@@ -615,11 +623,19 @@
     left 50px
     z-index 2
 
+    @media mobile
+      left 50%
+      transform translateX(-50%)
+
   &__text
     display inline-block
     vertical-align top
     max-width 475px
     padding-top 56px
+
+    @media mobile
+      padding-top 59px
+
     span
       color gray3
 
@@ -639,11 +655,37 @@
   &__name
     margin-bottom 15px
 
+    span.like-h2
+
+      @media mobile
+        font-size 30px
+        line-height 32px
+
+    @media mobile
+      text-align center
+
+
   &__description
     margin-bottom 29px
 
+    @media mobile
+      text-align center
+
+    br
+
+      @media mobile
+        content ' '
+
+      &::after
+
+        @media mobile
+          content ' '
+
   &__link
     padding-left 98px
+
+    @media mobile
+      display none
 
     a
       text-decoration underline
@@ -677,9 +719,19 @@
       bottom 27px
       left -11px
 
+      @media mobile
+        left 50%
+        margin-left -70px
+        bottom 26px
+
     &_next
       bottom 21px
       left 29px
+
+      @media mobile
+        left 50%
+        margin-left 25px
+        bottom 20px
 
 .reviews
   width 750px
