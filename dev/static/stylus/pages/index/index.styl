@@ -48,7 +48,9 @@
 
     &__heading
       user-select none
-      text-align center
+
+      @media mobile
+        text-align center
 
       p
         color gray2
@@ -358,10 +360,11 @@
 
   &__day
     margin-bottom 16px
-    text-align center
+
 
     @media mobile
       margin-bottom 18px
+      text-align center
 
 
     span.like-h2
@@ -396,14 +399,22 @@
 
     &_prev
       transform rotate(180deg)
-      bottom -21px
-      left 50%
-      margin-left -68px
+      bottom -9px
+      left -10px
+
+      @media mobile
+        bottom -21px
+        left 50%
+        margin-left -68px
 
     &_next
-      bottom -27px
-      left 50%
-      margin-left 26px
+      bottom -13px
+      left 31px
+
+      @media mobile
+        bottom -27px
+        left 50%
+        margin-left 26px
 
 .defects
   margin-bottom 120px
