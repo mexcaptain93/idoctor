@@ -113,6 +113,9 @@
   .price
     margin-bottom 150px
 
+    @media mobile
+      margin-bottom 70px
+
     &__text
       display none
 
@@ -127,7 +130,7 @@
       justify-content center
       margin-top 57px
       margin-left -38px
-      margin-bottom 60px
+      margin-bottom 52px
 
 
       @media mobile
@@ -275,688 +278,772 @@
                 top 226px
                 left 229px
 
-.action-day
-  margin-bottom 124px
-
-  @media mobile
-    margin-left -15px
-    margin-right -15px
-    margin-bottom 47px
-
-  &__container
-    position relative
-    max-width 900px
-    height 250px
-    background linear-gradient(90deg, red_dark, red)
-    border-radius 10px
-    padding 34px 47px
+  .action-day
+    margin-bottom 124px
 
     @media mobile
-      padding 34px 15px
-      border-radius 0
-      height auto
-      background linear-gradient(27deg, red_dark3, red2)
+      margin-left -15px
+      margin-right -15px
+      margin-bottom 47px
+
+    &__container
+      position relative
+      max-width 900px
+      height 250px
+      background linear-gradient(90deg, red_dark, red)
+      border-radius 10px
+      padding 34px 47px
+
+      @media mobile
+        padding 34px 15px
+        border-radius 0
+        height auto
+        background linear-gradient(27deg, red_dark3, red2)
 
 
-  &__back
-    position absolute
-    background-color red_dark2
-    width 100%
-    height 100%
-    top 10px
-    left 10px
-    border-radius 10px
-
-    @media mobile
-      display none
-
-  &__slider
-    max-width 500px
-    outline none
-
-    @media mobile
-      max-width 100%
+    &__back
+      position absolute
+      background-color red_dark2
       width 100%
-
-  &__item
-    outline none
-
-    @media mobile
-      padding-top 39px
-
-  &__title
-    position absolute
-    top -17px
-    left 50px
-
-    @media mobile
-      left 50%
-      transform translateX(-50%)
-
-  &__image
-    height 290px
-    position absolute
-    bottom 0
-    right 80px
-
-    @media mobile
-      opacity .3
-
-    img
-      max-height 100%
-
-  &__name
-
-    @media mobile
-      text-align center
-
-    span.like-h2
+      height 100%
+      top 10px
+      left 10px
+      border-radius 10px
 
       @media mobile
-        font-size 30px
-        line-height 30px
-        @extend .museo-500
+        display none
 
-    .like-h2
-      @extend .museo-900
-
-  &__day
-    margin-bottom 16px
-
-
-    @media mobile
-      margin-bottom 18px
-      text-align center
-
-
-    span.like-h2
-
-        @media mobile
-          @extend .museo-900
-          font-size 30px
-          line-height 30px
-
-  &__text
-    padding-left 3px
-    margin-bottom 27px
-
-    @media mobile
-      text-align center
-
-  &__link
-    padding-left 98px
-
-    @media mobile
-      display none
-
-    a
-      text-decoration underline
-
-  &__arrow
-    display block!important
-    position absolute
-    cursor pointer
-    z-index 2
-
-
-    &_prev
-      transform rotate(180deg)
-      bottom -9px
-      left -10px
+    &__slider
+      max-width 500px
+      outline none
 
       @media mobile
-        bottom -21px
+        max-width 100%
+        width 100%
+
+    &__item
+      outline none
+
+      @media mobile
+        padding-top 39px
+
+    &__title
+      position absolute
+      top -17px
+      left 50px
+
+      @media mobile
         left 50%
-        margin-left -68px
+        transform translateX(-50%)
 
-    &_next
-      bottom -13px
-      left 31px
-
-      @media mobile
-        bottom -27px
-        left 50%
-        margin-left 26px
-
-.defects
-  margin-bottom 120px
-
-  @media mobile
-    margin-bottom 76px
-
-  &__back
-    position absolute
-    top 0
-    height 670px
-    left 0
-    right 0
-    background-image url('../img/general/2_popular_back_pic.jpg')
-    filter grayscale(0.2) opacity(0.1)
-    background-size 100%
-    background-repeat no-repeat
-    background-position center
-
-  &__title
-    text-align center
-    margin-bottom 23px
-
-    @media mobile
-      margin-bottom 17px
-
-    span.like-h2
+    &__image
+      height 290px
+      position absolute
+      bottom 0
+      right 80px
 
       @media mobile
-        font-size 28px
-        line-height 32px
-
-
-  &__description
-    text-align center
-    margin-bottom 55px
-
-    @media mobile
-      margin-bottom 39px
-
-    br
-
-      &::after
-
-        @media mobile
-          content ' '
-
-      @media mobile
-        content ' '
-
-  &__popular
-    max-width 800px
-    margin 0 auto
-    display flex
-    flex-wrap wrap
-    margin-bottom 45px
-
-    @media mobile
-      display block
-      margin-bottom 39px
-
-
-  &__all
-    display none
-
-  &__all-wrap
-    max-width 800px
-    margin 0 auto
-    display flex
-    flex-wrap wrap
-    margin-bottom 45px
-
-    @media mobile
-      margin-bottom 39px
-
-  .defect
-    width 31.4%
-    font-size 0
-    margin-bottom 15px
-
-    &:nth-child(-n+6)
-
-      @media mobile
-        display block
-
-    @media mobile
-      display none
-      width 100%
-      padding-left 42px
-
-    &__icon
-      display inline-block
-      vertical-align middle
-      text-align center
-      line-height 34px
-      height 34px
-      width 37px
-      margin-right 12px
+        opacity .3
 
       img
         max-height 100%
-        max-width 100%
 
     &__name
-      display inline-block
-      vertical-align middle
+
+      @media mobile
+        text-align center
+
+      span.like-h2
+
+        @media mobile
+          font-size 30px
+          line-height 30px
+          @extend .museo-500
+
+      .like-h2
+        @extend .museo-900
+
+    &__day
+      margin-bottom 16px
 
 
+      @media mobile
+        margin-bottom 18px
+        text-align center
 
-  &__actions
-    text-align right
-    padding-right 166px
-    position relative
-    z-index 2
+
+      span.like-h2
+
+          @media mobile
+            @extend .museo-900
+            font-size 30px
+            line-height 30px
+
+    &__text
+      padding-left 3px
+      margin-bottom 27px
+
+      @media mobile
+        text-align center
+
+    &__link
+      padding-left 98px
+
+      @media mobile
+        display none
+
+      a
+        text-decoration underline
+
+    &__arrow
+      display block!important
+      position absolute
+      cursor pointer
+      z-index 2
+
+
+      &_prev
+        transform rotate(180deg)
+        bottom -9px
+        left -10px
+
+        @media mobile
+          bottom -21px
+          left 50%
+          margin-left -68px
+
+      &_next
+        bottom -13px
+        left 31px
+
+        @media mobile
+          bottom -27px
+          left 50%
+          margin-left 26px
+
+  .defects
+    margin-bottom 120px
 
     @media mobile
-      display flex
-      flex-direction column
-      padding-right 0
+      margin-bottom 76px
 
-    .actions
+    &__back
+      position absolute
+      top 0
+      height 670px
+      left 0
+      right 0
+      background-image url('../img/general/2_popular_back_pic.jpg')
+      filter grayscale(0.2) opacity(0.1)
+      background-size 100%
+      background-repeat no-repeat
+      background-position center
 
-      &__btn
-        margin-right 77px
+    &__title
+      text-align center
+      margin-bottom 23px
 
-        @media mobile
-          order 1
-          width 220px
-          height 48px
-          font-size 12px
-          line-height 48px
-          margin 0 auto
+      @media mobile
+        margin-bottom 17px
 
-        &:hover
-          color white
-
-
-      &__repair
-        position relative
-        color red
-        display inline-block
-        border-bottom 1px solid red
-        line-height 17px
+      span.like-h2
 
         @media mobile
-          margin 0 auto 57px auto
-          left -10px
+          font-size 28px
+          line-height 32px
 
-        &::before
-          content ''
-          background-image url('../img/svg/icon_arrow_link.svg')
-          background-size contain
-          background-repeat no-repeat
-          width 13px
-          height 13px
-          transform rotate(-90deg)
-          display inline-block
-          position absolute
-          top 1px
-          right -22px
-          transition all .3s linear
+
+    &__description
+      text-align center
+      margin-bottom 55px
+
+      @media mobile
+        margin-bottom 39px
+
+      br
 
         &::after
 
           @media mobile
-            content ' поломку'
-
-        &.opened
-          &::after
-            transform rotate(90deg)
-            top 6px
-
-.additional-service
-  margin-bottom 96px
-
-  @media mobile
-    margin-left -15px
-    margin-right -15px
-
-  .slick-arrow
-    @media mobile
-      display none !important
-
-
-  &__container
-    position relative
-    max-width 900px
-    height 250px
-    background white
-    border-radius 10px
-    padding 34px 47px
-
-    @media mobile
-      padding 10px 23px 0 23px
-      height auto
-
-  &__back
-    position absolute
-    background-color gray3
-    width 100%
-    height 100%
-    top 10px
-    left 10px
-    border-radius 10px
-
-    @media mobile
-      display none
-
-  &__title
-    position absolute
-    top -17px
-    left 50px
-    z-index 2
-
-    @media mobile
-      left 50%
-      transform translateX(-50%)
-
-  &__text
-    display inline-block
-    vertical-align top
-    max-width 475px
-    padding-top 56px
-
-    @media mobile
-      padding-top 59px
-      max-width none
-
-    span
-      color gray3
-
-  &__slider-wrap
-    position relative
-    top -57px
-
-    @media mobile
-      top 0
-
-  &__slider
-    position relative
-    top 0
-    height 273px
-    outline none
-
-    @media mobile
-      height auto
-
-  &__item
-    outline none
-
-  &__name
-    margin-bottom 15px
-
-    span.like-h2
-
-      @media mobile
-        font-size 30px
-        line-height 32px
-
-    @media mobile
-      text-align center
-
-
-  &__description
-    margin-bottom 29px
-
-    @media mobile
-      text-align center
-      margin-bottom 4px
-
-    br
-
-      @media mobile
-        content ' '
-
-      &::after
+            content ' '
 
         @media mobile
           content ' '
 
-  &__link
-    padding-left 98px
+    &__popular
+      max-width 800px
+      margin 0 auto
+      display flex
+      flex-wrap wrap
+      margin-bottom 45px
 
-    @media mobile
+      @media mobile
+        display block
+        margin-bottom 39px
+        width 290px
+
+
+    &__all
       display none
 
-    a
-      text-decoration underline
-      color red
-
-  &__image
-    display inline-block
-    vertical-align top
-    padding-left 30px
-
-    @media mobile
-      display block
-      padding-left 0
-
-    img
-      max-height 273px
+    &__all-wrap
+      max-width 800px
+      margin 0 auto
+      display flex
+      flex-wrap wrap
+      margin-bottom 45px
 
       @media mobile
-        max-height 215px
-        margin 0 auto
+        margin-bottom 39px
 
-    &_wide
-      position relative
+    .defect
+      width 31.4%
+      font-size 0
+      margin-bottom 15px
 
-      img
-        position absolute
-        left -40px
+      &:nth-child(-n+6)
 
         @media mobile
-          position static
+          display block
+
+      @media mobile
+        display none
+        width 100%
+        padding-left 42px
+
+      &__icon
+        display inline-block
+        vertical-align middle
+        text-align center
+        line-height 34px
+        height 34px
+        width 37px
+        margin-right 12px
+
+        img
+          max-height 100%
+          max-width 100%
+
+      &__name
+        display inline-block
+        vertical-align middle
 
 
-  &__arrow
-    display block!important
-    position absolute
-    cursor pointer
-    z-index 2
+
+    &__actions
+      text-align right
+      padding-right 166px
+      position relative
+      z-index 2
+
+      @media mobile
+        display flex
+        flex-direction column
+        padding-right 0
+
+      .actions
+
+        &__btn
+          margin-right 77px
+
+          @media mobile
+            order 1
+            width 220px
+            height 48px
+            font-size 12px
+            line-height 48px
+            margin 0 auto
+
+          &:hover
+            color white
 
 
-    &_prev
-      transform rotate(180deg)
-      bottom 27px
-      left -11px
+        &__repair
+          position relative
+          color red
+          display inline-block
+          border-bottom 1px solid red
+          line-height 17px
+
+          @media mobile
+            margin 0 auto 57px auto
+            left -10px
+
+          &::before
+            content ''
+            background-image url('../img/svg/icon_arrow_link.svg')
+            background-size contain
+            background-repeat no-repeat
+            width 13px
+            height 13px
+            transform rotate(-90deg)
+            display inline-block
+            position absolute
+            top 1px
+            right -22px
+            transition all .3s linear
+
+          &::after
+
+            @media mobile
+              content ' поломку'
+
+          &.opened
+            &::after
+              transform rotate(90deg)
+              top 6px
+
+  .additional-service
+    margin-bottom 96px
+
+    @media mobile
+      margin-left -15px
+      margin-right -15px
+
+    .slick-arrow
+      @media mobile
+        display none !important
+
+
+    &__container
+      position relative
+      max-width 900px
+      height 250px
+      background white
+      border-radius 10px
+      padding 34px 47px
+
+      @media mobile
+        padding 10px 23px 0 23px
+        height auto
+        border-radius 0
+
+    &__back
+      position absolute
+      background-color gray3
+      width 100%
+      height 100%
+      top 10px
+      left 10px
+      border-radius 10px
+
+      @media mobile
+        display none
+
+    &__title
+      position absolute
+      top -17px
+      left 50px
+      z-index 2
 
       @media mobile
         left 50%
-        margin-left -70px
-        bottom auto
+        transform translateX(-50%)
+
+    &__text
+      display inline-block
+      vertical-align top
+      max-width 475px
+      padding-top 56px
+
+      @media mobile
+        padding-top 59px
+        max-width none
+
+      span
+        color gray3
+
+    &__slider-wrap
+      position relative
+      top -57px
+
+      @media mobile
         top 0
 
-    &_next
-      bottom 21px
-      left 29px
+    &__slider
+      position relative
+      top 0
+      height 273px
+      outline none
 
       @media mobile
-        left 50%
-        margin-left 25px
-        bottom auto
-        top 6px
+        height auto
 
-  &__arrows
+    &__item
+      outline none
+
+    &__name
+      margin-bottom 15px
+
+      span.like-h2
+
+        @media mobile
+          font-size 30px
+          line-height 32px
+
+      @media mobile
+        text-align center
+
+
+    &__description
+      margin-bottom 29px
+
+      @media mobile
+        text-align center
+        margin-bottom 4px
+
+      br
+
+        @media mobile
+          content ' '
+
+        &::after
+
+          @media mobile
+            content ' '
+
+    &__link
+      padding-left 98px
+
+      @media mobile
+        display none
+
+      a
+        text-decoration underline
+        color red
+
+    &__image
+      display inline-block
+      vertical-align top
+      padding-left 30px
+
+      @media mobile
+        display block
+        padding-left 0
+
+      img
+        max-height 273px
+
+        @media mobile
+          max-height 215px
+          margin 0 auto
+
+      &_wide
+        position relative
+
+        img
+          position absolute
+          left -40px
+
+          @media mobile
+            position static
+
+
+    &__arrow
+      display block!important
+      position absolute
+      cursor pointer
+      z-index 2
+
+
+      &_prev
+        transform rotate(180deg)
+        bottom 27px
+        left -11px
+
+        @media mobile
+          left 50%
+          margin-left -70px
+          bottom auto
+          top 0
+
+      &_next
+        bottom 21px
+        left 29px
+
+        @media mobile
+          left 50%
+          margin-left 25px
+          bottom auto
+          top 6px
+
+    &__arrows
+      display none
+
+      @media mobile
+        display block
+        position relative
+        margin-bottom 68px
+
+  .reviews
+    width 750px
+    margin 0 auto 45px
+
+
+    &__list
+      outline none
+      margin-bottom 37px
+
+    &__wrap
+      width 750px
+      padding 0 10px
+
+    &__item
+      outline none
+
+
+    &__heading
+      display flex
+      justify-content space-between
+      margin-bottom 25px
+      width 690px
+
+    .heading
+
+      &__name
+        margin-bottom 16px
+
+
+
+
+      &__text
+        width 170px
+
+    &__photo
+      text-align center
+      margin-left 15px
+      margin-top 5px
+
+      img
+        max-width 100px
+        max-height 100px
+
+
+
+    &__arrow
+      display block!important
+      position absolute
+      cursor pointer
+      z-index 2
+
+      &_prev
+        transform rotate(180deg)
+        top 29px
+        left 258px
+
+      &_next
+        top 35px
+        left 421px
+
+    &__ask-link
+      text-align center
+
+      &:hover
+
+        a
+          text-decoration none
+
+      a
+        color red
+        text-decoration underline
+        transition .3s linear text-decoration
+
+      img
+        margin-right 5px
+        width 20px
+
+
+
+  .partners
+    margin-top 55px
+    margin-bottom 58px
+
+    &__heading
+      margin-bottom 55px
+      text-align center
+
+    &__list
+      display flex
+      justify-content space-between
+
+  .seo
+    margin-bottom 115px
+    &__text
+      display flex
+
+      .text
+
+        &__block
+          width 50%
+          padding-right 10px
+
+          p
+            line-height 19px
+            margin-bottom 21px
+            color alpha(white, 10%)
+
+            &:last-child
+              margin-bottom 0
+
+  .map
+    margin-bottom 55px
+
+    &__wrap
+      position relative
+      width 100%
+      height 230px
+      background-image url('../img/general/1_map.png')
+      background-repeat no-repeat
+      background-size cover
+      border-radius 10px
+
+    &__pin
+      position absolute
+      top 99px
+      left 428px
+      width 40px
+      height 40px
+      border-radius 20px
+      background-color red
+      background-image url('../img/svg/icon_map_placeholder.svg')
+      background-size 13px
+      background-repeat no-repeat
+      background-position center center
+
+    &__info
+      cursor pointer
+      position absolute
+      top 99px
+      left 472px
+      width 40px
+      height 40px
+      border-radius 20px
+      background-color white
+      background-image url('../img/svg/icon_map_info.svg')
+      background-size 8px
+      background-position center center
+      background-repeat no-repeat
+
+      &:hover
+
+        & + .map__content
+          display block
+
+    &__content
+      display none
+      position absolute
+      top 0
+      right 0
+      width 392px
+      height 100%
+      background-image url('../img/general/map_content_bg.png')
+
+
+    .content
+
+      &__wrap
+        display flex
+        flex-direction column
+        justify-content center
+        height 100%
+        margin-left 162px
+        padding-top 7px
+
+      &__block
+
+        &:first-child
+          margin-bottom 11px
+
+
+        span
+          display block
+
+          &.like-h6
+            color black
+            margin-bottom 3px
+
+          &.like-h4
+            color red
+
+  .diagnosis-mobile
     display none
 
     @media mobile
       display block
-      position relative
-      margin-bottom 68px
 
-.reviews
-  width 750px
-  margin 0 auto 45px
-
-
-  &__list
-    outline none
-    margin-bottom 37px
-
-  &__wrap
-    width 750px
-    padding 0 10px
-
-  &__item
-    outline none
-
-
-  &__heading
-    display flex
-    justify-content space-between
-    margin-bottom 25px
-    width 690px
-
-  .heading
+    &__slider
+      margin-bottom 22px
 
     &__name
-      margin-bottom 16px
+      text-align center
+      margin-bottom 23px
 
 
-
-
-    &__text
-      width 170px
-
-  &__photo
-    text-align center
-    margin-left 15px
-    margin-top 5px
-
-    img
-      max-width 100px
-      max-height 100px
-
-
-
-  &__arrow
-    display block!important
-    position absolute
-    cursor pointer
-    z-index 2
-
-    &_prev
-      transform rotate(180deg)
-      top 29px
-      left 258px
-
-    &_next
-      top 35px
-      left 421px
-
-  &__ask-link
-    text-align center
-
-    &:hover
-
-      a
-        text-decoration none
-
-    a
-      color red
-      text-decoration underline
-      transition .3s linear text-decoration
-
-    img
-      margin-right 5px
-      width 20px
-
-
-
-.partners
-  margin-top 55px
-  margin-bottom 58px
-
-  &__heading
-    margin-bottom 55px
-    text-align center
-
-  &__list
-    display flex
-    justify-content space-between
-
-.seo
-  margin-bottom 115px
-  &__text
-    display flex
-
-    .text
-
-      &__block
-        width 50%
-        padding-right 10px
-
-        p
-          line-height 19px
-          margin-bottom 21px
-          color alpha(white, 10%)
-
-          &:last-child
-            margin-bottom 0
-
-.map
-  margin-bottom 55px
-
-  &__wrap
-    position relative
-    width 100%
-    height 230px
-    background-image url('../img/general/1_map.png')
-    background-repeat no-repeat
-    background-size cover
-    border-radius 10px
-
-  &__pin
-    position absolute
-    top 99px
-    left 428px
-    width 40px
-    height 40px
-    border-radius 20px
-    background-color red
-    background-image url('../img/svg/icon_map_placeholder.svg')
-    background-size 13px
-    background-repeat no-repeat
-    background-position center center
-
-  &__info
-    cursor pointer
-    position absolute
-    top 99px
-    left 472px
-    width 40px
-    height 40px
-    border-radius 20px
-    background-color white
-    background-image url('../img/svg/icon_map_info.svg')
-    background-size 8px
-    background-position center center
-    background-repeat no-repeat
-
-    &:hover
-
-      & + .map__content
-        display block
-
-  &__content
-    display none
-    position absolute
-    top 0
-    right 0
-    width 392px
-    height 100%
-    background-image url('../img/general/map_content_bg.png')
-
-
-  .content
-
-    &__wrap
+    &__time-price
+      width 260px
+      margin 0 auto
       display flex
-      flex-direction column
-      justify-content center
-      height 100%
-      margin-left 162px
-      padding-top 7px
+      flex-direction row
+      justify-content space-between
 
-    &__block
-
-      &:first-child
-        margin-bottom 11px
-
+    &__time
 
       span
         display block
+        margin-bottom 3px
 
-        &.like-h6
-          color black
-          margin-bottom 3px
+    &__price
 
-        &.like-h4
-          color red
+      span
+        display block
+        margin-bottom 3px
+
+    .fullprice
+      position relative
+      margin-bottom 25px
+
+      &__arrow
+        display block!important
+        position absolute
+        cursor pointer
+        z-index 2
+
+
+        &_prev
+          transform rotate(180deg)
+          left 50%
+          margin-left -79px
+          bottom auto
+          top -6px
+
+        &_next
+          left 50%
+          margin-left 40px
+          bottom auto
+          top 1px
+
+      .show-price
+
+        &__icon
+          margin-bottom 24px
+
+    .call
+      padding-top 23px
+
+      &__text
+        text-align center
+        margin-bottom 14px
+
+        .bold
+          @extend .museo-900
+
+          &::before
+            content ' '
+
+      &__input
+        margin-bottom 15px
+
+        .input
+          width 100%
+
 

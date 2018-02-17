@@ -121,6 +121,52 @@ block content
 						br
 						| работа + комплектующие
 
+
+		.price__diagnosis-mobile.diagnosis-mobile
+			.diagnosis-mobile__slider
+				.diagnosis-mobile__item
+					.diagnosis-mobile__name
+						span.like-h3 Восстановление после попадания влаги
+					.diagnosis-mobile__time-price
+						.diagnosis-mobile__time
+							span.like-h6 Время ремонта от:
+							span.like-h3 30 минут
+						.diagnosis-mobile__price
+							span.like-h6 Стоимость от:
+							span.like-h3 999 руб.
+
+
+
+
+			.diagnosis-mobile__fullprice.fullprice
+				.show-price
+					.show-price__icon
+						include ../../static/img/svg/icon_show_price.svg
+					.show-price__text
+						a(href='#').like-h4 Открыть полный прайс
+						span.like-h6 14 позиций
+
+
+				.fullprice__arrow.fullprice__arrow_prev.js-diagnosis-prev
+					.arrow.arrow_red-hover
+						include ../../static/img/svg/icon_arrow.svg
+				.fullprice__arrow.fullprice__arrow_next.js-diagnosis-next
+					.arrow.arrow_red-hover
+						include ../../static/img/svg/icon_arrow.svg
+			.diagnosis-mobile__delimiter.delimiter
+			.diagnosis-mobile__call.call
+				.call__text
+					span.like-h5
+						| Затрудняетесь с определением неисправности?
+						span.bold Поможем!
+				.call__input
+					.input.input_btn
+						input(type='text').input__field
+						button(href='#').input__btn
+							include ../../static/img/svg/icon_arrow.svg
+				.call__hint
+					span.like-h6 В стоимость входит: работа + комплектующие
+
 	section.action-day
 		.action-day__back
 		.action-day__container
