@@ -596,6 +596,11 @@
     margin-left -15px
     margin-right -15px
 
+  .slick-arrow
+    @media mobile
+      display none !important
+
+
   &__container
     position relative
     max-width 900px
@@ -605,7 +610,7 @@
     padding 34px 47px
 
     @media mobile
-      padding 66px 23px
+      padding 10px 23px 0 23px
       height auto
 
   &__back
@@ -616,6 +621,9 @@
     top 10px
     left 10px
     border-radius 10px
+
+    @media mobile
+      display none
 
   &__title
     position absolute
@@ -635,6 +643,7 @@
 
     @media mobile
       padding-top 59px
+      max-width none
 
     span
       color gray3
@@ -643,11 +652,17 @@
     position relative
     top -57px
 
+    @media mobile
+      top 0
+
   &__slider
     position relative
     top 0
     height 273px
     outline none
+
+    @media mobile
+      height auto
 
   &__item
     outline none
@@ -670,6 +685,7 @@
 
     @media mobile
       text-align center
+      margin-bottom 4px
 
     br
 
@@ -696,8 +712,16 @@
     vertical-align top
     padding-left 30px
 
+    @media mobile
+      display block
+      padding-left 0
+
     img
       max-height 273px
+
+      @media mobile
+        max-height 215px
+        margin 0 auto
 
     &_wide
       position relative
@@ -705,6 +729,9 @@
       img
         position absolute
         left -40px
+
+        @media mobile
+          position static
 
 
   &__arrow
@@ -722,7 +749,8 @@
       @media mobile
         left 50%
         margin-left -70px
-        bottom 26px
+        bottom auto
+        top 0
 
     &_next
       bottom 21px
@@ -731,7 +759,16 @@
       @media mobile
         left 50%
         margin-left 25px
-        bottom 20px
+        bottom auto
+        top 6px
+
+  &__arrows
+    display none
+
+    @media mobile
+      display block
+      position relative
+      margin-bottom 68px
 
 .reviews
   width 750px
