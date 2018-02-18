@@ -222,7 +222,7 @@ function showAllDefects() {
 }
 
 function scrolls() {
-    function template(link, object, time) {
+    function scroll(link, object, time) {
         link.on('click', function (e) {
             e.preventDefault();
             $('html, body').animate({
@@ -231,8 +231,13 @@ function scrolls() {
         });
     }
 
-    template($('.js-how-to-drive'), $('.js-map'), 2000);
-    template($('.js-about-price'), $('.js-price'), 500);
+    scroll($('.js-how-to-drive'), $('.js-map'), 2000);
+    scroll($('.js-about-price'), $('.js-price'), 500);
+    scroll($('.js-action-day-btn'), $('.js-action-day-section'), 500);
+    scroll($('.js-service-btn'), $('.js-service-section'), 500);
+    scroll($('.js-additional-btn'), $('.js-additional-section'), 500);
+    scroll($('.js-reviews-btn'), $('.js-reviews-section'), 500);
+    scroll($('.js-partners-btn'), $('.js-partners-section'), 500);
 
 
 }
@@ -242,6 +247,14 @@ function mobileMenu() {
         e.preventDefault();
         $(this).toggleClass('header-mobile__burger_active');
         $('.js-mobile-menu').slideToggle();
+
+
+    });
+
+    $('.js-mobile-menu').find('a').on('click', function (e) {
+        $('.js-mobile-menu').slideUp();
+        $('.js-open-mobile-menu').removeClass('header-mobile__burger_active');
+
     });
 }
 

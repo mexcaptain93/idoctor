@@ -23,22 +23,22 @@ block content
 						| iDoctor — это не только быстрое и качественное исполнение,
 						br
 						| но и гарантия качества на каждую услугу от 3 месяцев.
-					a(href='#').btn Стоимость
+					a(href='#').btn.js-about-price Стоимость
 
 			.main__menu
 				.menu
 					.menu__item
-						a(href='#') Стоимость
+						a(href='#').js-about-price Стоимость
 					.menu__item
-						a(href='#') Акция дня
+						a(href='#').js-action-day-btn Акция дня
 					.menu__item
-						a(href='#') Сервис
+						a(href='#').js-service-btn Сервис
 					.menu__item
-						a(href='#') Услуги Plus
+						a(href='#').js-additional-btn Услуги Plus
 					.menu__item
-						a(href='#') Отзывы
+						a(href='#').js-reviews-btn Отзывы
 					.menu__item
-						a(href='#') Партнёры
+						a(href='#').js-partners-btn Партнёры
 					.menu__item
 						a(href='#') Контакты
 
@@ -154,7 +154,7 @@ block content
 				.call__hint
 					span.like-h6 В стоимость входит: работа + комплектующие
 
-	section.action-day
+	section.action-day.js-action-day-section
 		.action-day__back
 		.action-day__container
 			.action-day__title
@@ -239,7 +239,7 @@ block content
 
 
 
-	section.defects
+	section.defects.js-service-section
 		.defects__back
 		.defects__title
 			span.like-h2 Распространённые поломки
@@ -366,7 +366,7 @@ block content
 
 
 
-	section.additional-service
+	section.additional-service.js-additional-section
 		.additional-service__back
 		.additional-service__container
 			.additional-service__title
@@ -477,7 +477,7 @@ block content
 										include ../../static/img/svg/icon_arrow.svg
 						.additional-service__image
 							img(src='static/img/general/5_extra.png')
-	section.reviews
+	section.reviews.js-reviews-section
 		.reviews__list.js-reviews
 			.reviews__item
 				.reviews__wrap
@@ -626,7 +626,7 @@ block content
 
 	.delimiter
 
-	section.partners
+	section.partners.js-partners-section
 		.partners__heading
 			span.like-h2 Партнёр-сервис
 		.partners__list
