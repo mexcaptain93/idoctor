@@ -299,6 +299,8 @@
         border-radius 0
         height auto
         background linear-gradient(27deg, red_dark3, red2)
+        width 100%
+        max-width none
 
 
     &__back
@@ -344,6 +346,10 @@
 
       @media mobile
         opacity .3
+        height 100%
+        right auto
+        left 50%
+        transform translateX(-50%)
 
       img
         max-height 100%
@@ -495,6 +501,7 @@
 
       @media mobile
         margin-bottom 39px
+        width 290px
 
     .defect
       width 31.4%
@@ -620,6 +627,8 @@
         padding 10px 23px 0 23px
         height auto
         border-radius 0
+        width 100%
+        max-width none
 
     &__back
       position absolute
@@ -652,6 +661,7 @@
       @media mobile
         padding-top 59px
         max-width none
+        width 100%
 
       span
         color gray3
@@ -815,6 +825,7 @@
 
       @media mobile
         flex-direction column
+        max-width none
 
     .heading
 
@@ -901,6 +912,7 @@
 
     @media mobile
       margin-top 45px
+      margin-bottom 14px
 
     &__heading
       margin-bottom 55px
@@ -931,14 +943,30 @@
 
   .seo
     margin-bottom 115px
+
+    @media mobile
+      margin-bottom 57px
+
     &__text
       display flex
+
+      @media mobile
+        flex-direction column
 
       .text
 
         &__block
           width 50%
           padding-right 10px
+
+          @media mobile
+            width 100%
+            padding-right 0
+
+          &:last-child
+
+            @media mobile
+              display none
 
           p
             line-height 19px
@@ -951,6 +979,10 @@
   .map
     margin-bottom 55px
 
+    @media mobile
+      margin-left -15px
+      margin-right -15px
+
     &__wrap
       position relative
       width 100%
@@ -959,6 +991,11 @@
       background-repeat no-repeat
       background-size cover
       border-radius 10px
+
+      @media mobile
+        margin-bottom 137px
+        border-radius 0
+        background-position center center
 
     &__pin
       position absolute
@@ -972,6 +1009,10 @@
       background-size 13px
       background-repeat no-repeat
       background-position center center
+
+      @media mobile
+        left 50%
+        margin-left -22px
 
     &__info
       cursor pointer
@@ -987,6 +1028,9 @@
       background-position center center
       background-repeat no-repeat
 
+      @media mobile
+        display none
+
       &:hover
 
         & + .map__content
@@ -1001,6 +1045,14 @@
       height 100%
       background-image url('../img/general/map_content_bg.png')
 
+      @media mobile
+        display block
+        width 100%
+        top 100%
+        background none
+        margin-top -50px
+
+
 
     .content
 
@@ -1011,6 +1063,10 @@
         height 100%
         margin-left 162px
         padding-top 7px
+
+        @media mobile
+          margin-left 0
+          text-align center
 
       &__block
 
@@ -1025,8 +1081,14 @@
             color black
             margin-bottom 3px
 
+            @media mobile
+              color gray2
+
           &.like-h4
             color red
+
+            @media mobile
+              color white
 
   .diagnosis-mobile
     display none
