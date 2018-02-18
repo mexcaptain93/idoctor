@@ -26,8 +26,12 @@ function toggleHeaderSearch() {
 }
 
 function togglers() {
-    var selectedType = '';
     var typeToggler = $('.js-toggler-type');
+    var selectedType = typeToggler.attr('data-value');
+
+    var modelToggler = $('.js-toggler-model');
+    var selectedModel = modelToggler.attr('data-value');
+
     var typesQuantity = typeToggler.find('[data-value]').length;
     refreshBack(typeToggler, typesQuantity);
 
@@ -36,11 +40,17 @@ function togglers() {
         selectedType = $(this).attr('data-value');
         typeToggler.attr('data-value', selectedType);
         refreshBack(typeToggler, typesQuantity);
+        refreshData(selectedType, selectedModel);
+
+        if(selectedType == 'ipad') {
+            modelToggler.parent().css({opacity: 0});
+        } else {
+            modelToggler.parent().css({opacity: 1});
+        }
+
     });
 
 
-    var selectedModel = '';
-    var modelToggler = $('.js-toggler-model');
     var modelsQuantity = modelToggler.find('[data-value]').length;
 
     refreshBack(modelToggler, modelsQuantity);
@@ -50,6 +60,7 @@ function togglers() {
         selectedModel = $(this).attr('data-value');
         modelToggler.attr('data-value', selectedModel);
         refreshBack(modelToggler, modelsQuantity);
+        refreshData(selectedType, selectedModel);
     });
 
 
@@ -59,7 +70,47 @@ function togglers() {
     }
 }
 
+function refreshData(selectedType, selectedModel) {
+    $('.js-diagnosis-mobile-slider').not('.slick-initialized').slick();
+
+    if (selectedType == 'iphone') {
+        var prices = price.types[selectedType][selectedModel];
+    } else {
+        var prices = price.types[selectedType];
+    }
+
+
+
+
+    for(var i in prices) {
+        $('.js-pain').eq(i).attr('data-name', prices[i].name);
+        $('.js-pain').eq(i).attr('data-time', prices[i].time);
+        $('.js-pain').eq(i).attr('data-price', prices[i].price);
+
+
+
+        $('.js-diagnosis-mobile-slider').append('<div class="diagnosis-mobile__item">\n' +
+            '                <div class="diagnosis-mobile__name"><span class="like-h3 js-diagnosis-name">' + prices[i].name +  '</span></div>\n' +
+            '                <div class="diagnosis-mobile__time-price">\n' +
+            '                  <div class="diagnosis-mobile__time"><span class="like-h6">Время ремонта от:</span><span class="like-h3 js-diagnosis-time">' + prices[i].time + '</span></div>\n' +
+            '                  <div class="diagnosis-mobile__price"><span class="like-h6">Стоимость от:</span><span class="like-h3 js-diagnosis-price">' + prices[i].price + '</span></div>\n' +
+            '                </div>\n' +
+            '              </div>' +
+            '');
+
+    }
+
+
+    $('.js-diagnosis-mobile-slider').slick('refresh');
+
+}
+
 function diagnosis() {
+    var type = ($('.js-toggler-type').attr('data-value'));
+    var model = ($('.js-toggler-model').attr('data-value'));
+
+    refreshData(type, model);
+
     $('.js-pain').on('mouseover', function (e) {
         e.preventDefault();
         var name = '';
@@ -132,6 +183,7 @@ function sliders() {
         autoplay: false
     });
 
+
     $('.js-additional-slider-prev').on('click', function (e) {
         e.preventDefault();
         $('.js-additional-service').find('.slick-prev').click();
@@ -148,6 +200,16 @@ function sliders() {
     $('.js-reviews-next').on('click', function (e) {
         e.preventDefault();
         $('.js-reviews').find('.slick-next').click();
+    });
+
+
+    $('.js-diagnosis-prev').on('click', function (e) {
+        e.preventDefault();
+        $('.js-diagnosis-mobile-slider').find('.slick-prev').click();
+    });
+    $('.js-diagnosis-next').on('click', function (e) {
+        e.preventDefault();
+        $('.js-diagnosis-mobile-slider').find('.slick-next').click();
     });
 }
 
@@ -182,3 +244,4 @@ function mobileMenu() {
         $('.js-mobile-menu').slideToggle();
     });
 }
+
