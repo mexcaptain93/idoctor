@@ -16,7 +16,7 @@ header.header
                     div.like-h5
                         a(href='tel:+79969207717') +7 (996) 920 77 17
                         br
-                        a(href='mailto:info@idoctor.ru') info@idoctor.ru
+                        a(href='mailto:service.idoctor@yandex.ru') service.idoctor@yandex.ru
             .header__item.header__item_hours.item
                 .item__label
                     span.like-h6 Режим работы:
@@ -27,23 +27,23 @@ header.header
                         | 10 — 19
             .header__item.header__item_search.item
                 .item__value
-                    a(href='#').js-show-header-search-bar
+                    a(href='#' hidden).js-show-header-search-bar
                         include ../../static/img/svg/icon_search.svg
             .header__item.header__item_price.item
                 .item__label
                     span.like-h6 Главный вопрос:
                 .item__value
-                    .btn.js-about-price Стоимость
+                    a(href='/index.html#price').btn Стоимость
         .header__line
             .contact-line
                 .contact-line__line
-                a(href='#').contact-line__link.js-how-to-drive Как к нам проехать?
+                a(href='#').contact-line__link.js-contacts Как к нам проехать?
                 .contact-line__social.social
                     .social__item.social__item_vk
-                        a(href='#')
+                        a(href='https://vk.com/idoktor29ru' target="_blank")
                             include ../../static/img/svg/icon_socials_vk.svg
                     .social__item.social__item_instagram
-                        a(href='#')
+                        a(href='http://instagram.com/idoctor29arh' target="_blank")
                             include ../../static/img/svg/icon_social_instagram.svg
         .header__search.search.js-header-search-bar
             .search__hint
@@ -70,19 +70,19 @@ header.header-mobile
     .header-mobile__menu.menu.js-mobile-menu
         .menu__list
             .menu__item
-                a(href='#').like-h5.js-about-price Стоимость
+                a(href='/index.html#price').like-h5 Стоимость
             .menu__item
-                a(href='#').like-h5.js-action-day-btn Акция дня
+                a(href='/index.html#action').like-h5 Акция дня
             .menu__item
-                a(href='#').like-h5.js-service-btn Сервис
+                a(href='/index.html#service').like-h5 Сервис
             .menu__item
-                a(href='#').like-h5.js-additional-btn Услуги Plus
+                a(href='/index.html#plus').like-h5 Услуги Plus
             .menu__item
-                a(href='#').like-h5.js-reviews-btn Отзывы
+                a(href='/index.html#reviews').like-h5 Отзывы
             .menu__item
-                a(href='#').like-h5.js-partners-btn Партнёры
+                a(href='/index.html#partners').like-h5 Партнёры
             .menu__item
-                a(href='#').like-h5 Контакты
+                a(href='/index.html#contacts').like-h5 Контакты
         .menu__search
             .input.input_btn
                 input(type='text' placeholder='Поиск').input__field

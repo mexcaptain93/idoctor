@@ -1,7 +1,7 @@
 extends ../layout/main
 
 block variables
-	- var title = 'Главная страница'
+	- var title = 'iDoctor - экспресс-ремонт iPhone/iPad в Архангельске'
 	- var pageClass = 'index-page'
 
 block content
@@ -28,19 +28,19 @@ block content
 			.main__menu
 				.menu
 					.menu__item
-						a(href='#').js-about-price Стоимость
+						a(href='/index.html#price') Стоимость
 					.menu__item
-						a(href='#').js-action-day-btn Акция дня
+						a(href='/index.html#action') Акция дня
 					.menu__item
-						a(href='#').js-service-btn Сервис
+						a(href='/index.html#service') Сервис
 					.menu__item
-						a(href='#').js-additional-btn Услуги Plus
+						a(href='/index.html#plus') Услуги Plus
 					.menu__item
-						a(href='#').js-reviews-btn Отзывы
+						a(href='/index.html#reviews') Отзывы
 					.menu__item
-						a(href='#').js-partners-btn Партнёры
+						a(href='/index.html#partners') Партнёры
 					.menu__item
-						a(href='#') Контакты
+						a(href='/index.html#contacts') Контакты
 
 
 		.main__down
@@ -48,6 +48,7 @@ block content
 				include ../../static/img/svg/icon_arrow.svg
 
 	section.price.js-price
+		a(name="price")
 		.price__text
 			span.like-h6 Выберите девайс и модель:
 		.price__device.device
@@ -85,8 +86,8 @@ block content
 					span.like-h5
 						| Затрудняетесь с определением неисправности?
 						.bold Поможем!
-					.input.input_btn
-						input(type='text').input__field
+					.input.input_btn.js-call-me-form
+						input(type='text').input__field.js-call-me-form-phone
 						button(href='#').input__btn
 							include ../../static/img/svg/icon_arrow.svg
 			.diagnosis__phone.phone
@@ -114,7 +115,7 @@ block content
 						.show-price__icon
 							include ../../static/img/svg/icon_show_price.svg
 						.show-price__text
-							a(href='#').like-h4 Открыть полный прайс
+							a(href='price-table.html').like-h4 Открыть полный прайс
 							span.like-h6 14 позиций
 					span.like-h6
 						| В стоимость ремонта входит:
@@ -130,7 +131,7 @@ block content
 					.show-price__icon
 						include ../../static/img/svg/icon_show_price.svg
 					.show-price__text
-						a(href='#').like-h4 Открыть полный прайс
+						a(href='price-table.html').like-h4 Открыть полный прайс
 						span.like-h6 14 позиций
 
 
@@ -146,14 +147,15 @@ block content
 					span.like-h5
 						| Затрудняетесь с определением неисправности?
 						span.bold Поможем!
-				.call__input
+				form.call__input.js-call-me-form
 					.input.input_btn
-						input(type='text').input__field
-						button(href='#').input__btn
+						input(type='text').input__field.js-call-me-form-phone
+						button(type="submit").input__btn
 							include ../../static/img/svg/icon_arrow.svg
 				.call__hint
 					span.like-h6 В стоимость входит: работа + комплектующие
 
+	a(name="action")
 	section.action-day.js-action-day-section
 		.action-day__back
 		.action-day__container
@@ -171,7 +173,7 @@ block content
 					.action-day__text
 						span.like-h5 В понедельник замена  защитного стекла абсолютно бесплатна! Вы платите только за комплектующие!
 					.action-day__link
-						a(href='#') Мне это подходит!
+						a(href='/feedback.html') Мне это подходит!
 
 
 				div.action-day__item
@@ -182,7 +184,7 @@ block content
 					.action-day__text
 						span.like-h5 Во вторник ремонт любых разъемов на вашем девайсе со скидкой 15%!
 					.action-day__link
-						a(href='#') Мне это подходит!
+						a(href='/feedback.html') Мне это подходит!
 
 				div.action-day__item
 					.action-day__name
@@ -192,7 +194,7 @@ block content
 					.action-day__text
 						span.like-h5 Только в среду чистка от пыли и грязи вашего девайса со скидкой от 20% до 50%!
 					.action-day__link
-						a(href='#') Мне это подходит!
+						a(href='/feedback.html') Мне это подходит!
 
 
 				div.action-day__item
@@ -203,7 +205,7 @@ block content
 					.action-day__text
 						span.like-h5 В четверг замена или ремонт любых кнопок на вашем девайсе со скидкой 20%
 					.action-day__link
-						a(href='#') Мне это подходит!
+						a(href='/feedback.html') Мне это подходит!
 
 
 				div.action-day__item
@@ -214,7 +216,7 @@ block content
 					.action-day__text
 						span.like-h5 В пятницу при предъявлении студенческого билета любой ремонт со скидкой 15%!
 					.action-day__link
-						a(href='#') Мне это подходит!
+						a(href='/feedback.html') Мне это подходит!
 
 				div.action-day__item
 					.action-day__name
@@ -224,7 +226,7 @@ block content
 					.action-day__text
 						span.like-h5 В субботу заменим аккумулятор любого девайса бесплатно! Вы платите только за комплектующие!
 					.action-day__link
-						a(href='#') Мне это подходит!
+						a(href='/feedback.html') Мне это подходит!
 
 
 				div.action-day__item
@@ -235,11 +237,12 @@ block content
 					.action-day__text
 						span.like-h5 Сегодня воскресение, а значит замена экрана для любого девайса будет произведена со скидкой в 20%
 					.action-day__link
-						a(href='#') Мне это подходит!
+						a(href='/feedback.html') Мне это подходит!
 
 
 
 	section.defects.js-service-section
+		a(name="service")
 		.defects__back
 		.defects__title
 			span.like-h2 Распространённые поломки
@@ -361,11 +364,12 @@ block content
 						span.like-h5 Не поворачивается экран
 
 		.defects__actions.actions
-				a(href='#').actions__btn.btn Как исправить?
+				a(href='/feedback.html').actions__btn.btn Как исправить?
 				a(href='#').actions__repair.js-show-all-defects Не нашел свою
 
 
 
+	a(name="plus")
 	section.additional-service.js-additional-section
 		.additional-service__back
 		.additional-service__container
@@ -383,7 +387,7 @@ block content
 									br
 									| хочется обновиться? Мы вам поможем!
 							.additional-service__link
-								a(href='#') Мне это подходит!
+								a(href='/feedback.html') Мне это подходит!
 							.additional-service__arrows
 								.additional-service__arrow.additional-service__arrow_prev.js-additional-slider-prev
 									.arrow.arrow_red-hover
@@ -404,7 +408,7 @@ block content
 									br
 									| защитное стекло возьмет удар на себя!
 							.additional-service__link
-								a(href='#') Мне это подходит!
+								a(href='/feedback.html') Мне это подходит!
 							.additional-service__arrows
 								.additional-service__arrow.additional-service__arrow_prev.js-additional-slider-prev
 									.arrow.arrow_red-hover
@@ -425,7 +429,7 @@ block content
 									br
 									| обрежем вашу SIM-карту!
 							.additional-service__link
-								a(href='#') Мне это подходит!
+								a(href='/feedback.html') Мне это подходит!
 							.additional-service__arrows
 								.additional-service__arrow.additional-service__arrow_prev.js-additional-slider-prev
 									.arrow.arrow_red-hover
@@ -446,7 +450,7 @@ block content
 									br
 									| все данные не потеряв ни байта информации!
 							.additional-service__link
-								a(href='#') Мне это подходит!
+								a(href='/feedback.html') Мне это подходит!
 							.additional-service__arrows
 								.additional-service__arrow.additional-service__arrow_prev.js-additional-slider-prev
 									.arrow.arrow_red-hover
@@ -467,7 +471,7 @@ block content
 									br
 									| хочется обновиться? Мы вам поможем!
 							.additional-service__link
-								a(href='#') Мне это подходит!
+								a(href='/feedback.html') Мне это подходит!
 							.additional-service__arrows
 								.additional-service__arrow.additional-service__arrow_prev.js-additional-slider-prev
 									.arrow.arrow_red-hover
@@ -477,6 +481,7 @@ block content
 										include ../../static/img/svg/icon_arrow.svg
 						.additional-service__image
 							img(src='static/img/general/5_extra.png')
+	a(name="reviews")
 	section.reviews.js-reviews-section
 		.reviews__list.js-reviews
 			.reviews__item
@@ -620,13 +625,13 @@ block content
 
 
 		.reviews__ask-link
-			a(href='#').like-h5
+			a(href='https://vk.com/idoktor29ru' target="_blank").like-h5
 				img(src='static/img/svg/icon_review_question.svg')
 				| Задать свой вопрос в Vk
 
 	.delimiter
-
 	section.partners.js-partners-section
+		a(name="partners")
 		.partners__heading
 			span.like-h2 Партнёр-сервис
 		.partners__list
@@ -666,6 +671,7 @@ block content
 				p.like-h5 Conversion rate, как следует из вышесказанного, развивает комплексный рекламный бриф. Повторный контакт переворачивает межличностный анализ зарубежного опыта. Имидж, суммируя приведенные примеры, специфицирует культурный рекламоноситель. PR упорядочивает потребительский жизненный цикл продукции. Фокус-группа определяет связанный системный анализ, не считаясь с затратами.
 
 	section.map.js-map
+		a(name="contacts")
 		.map__wrap
 			.map__pin
 			.map__info

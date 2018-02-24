@@ -13,19 +13,19 @@ block content
         .feedback__text
             p Не знаете или сомневаетесь в цене ремонта вашего девайса?
             p За вас это сделаем мы. Быстро и максимально точно!
-        .feedback__form.form
+        form.feedback__form.form.js-call-me-form
             .form__item
                 .form__label
                     span.like-h6 Меня зовут:
                 .form__input
                     .input
-                        input(type='text').input__field
+                        input(type='text').input__field.js-call-me-form-name
             .form__item
                 .form__label
                     span.like-h6 Позвоните на этот номер:
                 .form__input
                     .input
-                        input(type='text' placeholder='+7').input__field
+                        input(type='text' placeholder='+7').input__field.js-call-me-form-phone
             .form__item.form__item_btn
-                .btn Отправить
+                button.btn(type="submit") Отправить
 

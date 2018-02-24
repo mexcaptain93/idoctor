@@ -6,6 +6,7 @@ $(document).ready(function () {
     showAllDefects();
     scrolls();
     mobileMenu();
+    callMe();
 });
 
 
@@ -231,7 +232,7 @@ function scrolls() {
         });
     }
 
-    scroll($('.js-how-to-drive'), $('.js-map'), 2000);
+    scroll($('.js-contacts'), $('.js-map'), 2000);
     scroll($('.js-about-price'), $('.js-price'), 500);
     scroll($('.js-action-day-btn'), $('.js-action-day-section'), 500);
     scroll($('.js-service-btn'), $('.js-service-section'), 500);
@@ -258,3 +259,34 @@ function mobileMenu() {
     });
 }
 
+function callMe() {
+    var form = $('.js-call-me-form');
+    form.find('button').on('click', function (e) {
+        e.preventDefault();
+        var phone = form.find('.js-call-me-form-phone').val();
+        var name = form.find('.js-call-me-form-name').val();
+        if (phone) {
+            var data = 'phone=' + phone;
+
+            if (name) {
+                data += '&name=' + name
+            }
+
+
+            $.ajax({
+                type: 'POST',
+                url: 'mail.php',
+                data: data,
+                success: function(msg){
+                    if (name) {
+                        form.find('.js-call-me-form-name').val('');
+                        form.find('.js-call-me-form-phone').val('');
+                        form.parent().append('<br><p>Заявка успешно отправлена! Мы ответим на нее в ближайшее время</p>');
+                    } else {
+                        form.find('.js-call-me-form-phone').val(msg);
+                    }
+                }
+            });
+        }
+    });
+}
