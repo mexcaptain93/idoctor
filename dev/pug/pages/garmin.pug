@@ -1,0 +1,79 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Ремонт навигаторов Garmin'
+    - var pageClass = 'price-table'
+
+block content
+
+    .price
+        .price__name
+            span.like-h1 Стоимость ремонта навигаторов Garmin
+        .price__table.table
+            .table__row
+                .table__cell.table__cell_num
+                    span 1.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Диагностика навигатора Garmin
+                .table__cell.table__cell_price.table__cell_red
+                    span Бесплатно
+            .table__row
+                .table__cell.table__cell_num
+                    span 2.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена корпуса навигатора Garmin
+                .table__cell.table__cell_price
+                    span от 2000 руб.
+            .table__row
+                .table__cell.table__cell_num
+                    span 3.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена экрана навигатора Garmin
+                .table__cell.table__cell_price
+                    span от 3000 руб.
+            .table__row
+                .table__cell.table__cell_num
+                    span 4.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена кнопок навигатора Garmin
+                .table__cell.table__cell_price
+                    span от 500 руб.
+            .table__row
+                .table__cell.table__cell_num
+                    span 5.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Пайка компонентов
+                .table__cell.table__cell_price
+                    span от 300 руб.
+            .table__row
+                .table__cell.table__cell_num
+                    span 6.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Восстановление ПО
+                .table__cell.table__cell_price
+                    span от 500 руб.
+            .table__row
+                .table__cell.table__cell_num
+                    span 7.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Чистка от воды
+                .table__cell.table__cell_price
+                    span от 1000 руб.
+
+        .price__bottom
+            .price__download
+                .show-price
+                    .show-price__icon
+                        include ../../static/img/svg/icon_show_price.svg
+                    .show-price__text
+                        a(href='#').like-h4 Скачать прайс
+                        span.like-h6 PDF / 12.5 Mb
+            .price__order
+                a(href='/feedback.html').btn Позвонить

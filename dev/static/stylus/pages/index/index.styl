@@ -410,7 +410,7 @@
 
       &_prev
         transform rotate(180deg)
-        bottom -9px
+        bottom -8px
         left -10px
 
         @media mobile
@@ -444,6 +444,7 @@
       background-size 100%
       background-repeat no-repeat
       background-position center
+      pointer-events: none;
 
     &__title
       text-align center
@@ -514,7 +515,7 @@
           display block
 
       @media mobile
-        display none
+        //display none
         width 100%
         padding-left 42px
 
@@ -534,6 +535,15 @@
       &__name
         display inline-block
         vertical-align middle
+
+      &__text
+        display none
+
+        @media mobile
+          display none
+          margin-left -42px
+          padding-top 40px
+
 
 
 
@@ -575,6 +585,7 @@
           @media mobile
             margin 0 auto 57px auto
             left -10px
+            width 187px
 
           &::before
             content ''
@@ -1154,6 +1165,7 @@
 
         &__icon
           margin-bottom 24px
+
 
     .call
       padding-top 23px

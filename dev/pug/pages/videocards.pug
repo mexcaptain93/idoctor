@@ -1,0 +1,67 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Стоимость ремонта видеокарт'
+    - var pageClass = 'price-table'
+
+block content
+
+    .price
+        .price__name
+            span.like-h1 Стоимость ремонта видеокарт
+        .price__text.text
+            .text__main
+                p В данную категорию входят также устройства:
+                p RX470-580, RF1060-1080T
+            .text__hint
+                span
+                    | Стоимость ремонта
+                    br
+                    | указана с&nbsp;учетом
+                    br
+                    | комплектующих
+
+        .price__table.table
+            .table__row
+                .table__cell.table__cell_num
+                    span 1.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Диагностика видеокарт
+                .table__cell.table__cell_price.table__cell_red
+                    span Бесплатно
+            .table__row
+                .table__cell.table__cell_num
+                    span 2.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена кулера
+                .table__cell.table__cell_price
+                    span от 1500 руб.
+            .table__row
+                .table__cell.table__cell_num
+                    span 3.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена термопасты
+                .table__cell.table__cell_price
+                    span от 700 руб.
+            .table__row
+                .table__cell.table__cell_num
+                    span 4.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Компонентный ремонт
+                .table__cell.table__cell_price
+                    span от 4000 руб.
+
+        .price__bottom
+            .price__download
+                .show-price
+                    .show-price__icon
+                        include ../../static/img/svg/icon_show_price.svg
+                    .show-price__text
+                        a(href='#').like-h4 Скачать прайс
+                        span.like-h6 PDF / 12.5 Mb
+            .price__order
+                a(href='/feedback.html').btn Позвонить

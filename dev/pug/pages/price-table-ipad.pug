@@ -1,0 +1,141 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Стоимость ремонта iPad'
+    - var pageClass = 'price-table'
+
+block content
+
+    .price
+        .price__select-model.select-model
+            .select-model__text
+                span.like-h6 Выберите девайс и модель:
+            .select-model__device.device
+                .device__type
+                    span.like-h6 Девайс
+                    .toggler.js-toggler-type(data-value='ipad')
+                        .toggler__back
+                        .toggler__items
+                            span.toggler__item(data-value='iphone') iPhone
+                            a.toggler__item(data-value='ipad' href='/price-table-ipad.html') iPad
+                .device__model
+                    span.like-h6 Модель
+                    .toggler.toggler_model.js-toggler-model(data-value='6')
+                        .toggler__back
+                        .toggler__items
+                            a.toggler__item(data-value='5' href='/price-table-iphone-5.html') 5
+                            a.toggler__item(data-value='6' href='/price-table-iphone-6.html') 6
+                            a.toggler__item(data-value='7' href='/price-table-iphone-7.html') 7
+                            a.toggler__item(data-value='8' href='/price-table-iphone-8.html') 8
+        .price__back
+        .price__name
+            span.like-h1 Стоимость ремонта iPad
+        .price__text.text
+            .text__main
+                p В данную категорию входят также устройства:
+                p iPad, iPad mini
+            .text__hint
+                span
+                    | Стоимость ремонта
+                    br
+                    | указана с&nbsp;учетом
+                    br
+                    | комплектующих
+
+        .price__table.table
+            .table__row
+                .table__cell.table__cell_num
+                    span 1.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена cенсорного стекла на iPad / iPad mini
+                .table__cell.table__cell_price
+                    span 2000 руб.
+            .table__row
+                .table__cell.table__cell_num
+                    span 2.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена cенсорного стекла на iPad Air
+                .table__cell.table__cell_price
+                    span 2500 руб.
+            .table__row
+                .table__cell.table__cell_num
+                    span 3.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена cенсорного стекла на iPad Air 2
+                .table__cell.table__cell_price
+                    span 9500 руб.
+            .table__row
+                .table__cell.table__cell_num
+                    span 4.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена дисплея на iPad / iPad mini
+                .table__cell.table__cell_price
+                    span 3500 руб.
+            .table__row
+                .table__cell.table__cell_num
+                    span 5.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена дисплея на iPad Air
+                .table__cell.table__cell_price
+                    span 4500 руб.
+
+            .table__row
+                .table__cell.table__cell_num
+                    span 6.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена дисплея на iPad Air 2
+                .table__cell.table__cell_price
+                    span 9500 руб.
+
+            .table__row
+                .table__cell.table__cell_num
+                    span 7.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена аккумуляторной батареи на iPad / iPad mini
+                .table__cell.table__cell_price
+                    span 2000 руб.
+
+            .table__row
+                .table__cell.table__cell_num
+                    span 8.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена аккумуляторной батареи на iPad Air / Air 2
+                .table__cell.table__cell_price
+                    span 3000 руб.
+
+            .table__row
+                .table__cell.table__cell_num
+                    span 9.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена шлейфа заряда на iPad / iPad mini
+                .table__cell.table__cell_price
+                    span 1500 руб.
+
+            .table__row
+                .table__cell.table__cell_num
+                    span 10.
+                .table__cell.table__cell_text
+                    .table__text
+                        span Замена шлейфа заряда на iPad Air / Air 2
+                .table__cell.table__cell_price
+                    span 2000 руб.
+
+        .price__bottom
+            .price__download
+                .show-price
+                    .show-price__icon
+                        include ../../static/img/svg/icon_show_price.svg
+                    .show-price__text
+                        a(href='#').like-h4 Скачать прайс
+                        span.like-h6 PDF / 12.5 Mb
+            .price__order
+                a(href='#').btn Заказать ремонт

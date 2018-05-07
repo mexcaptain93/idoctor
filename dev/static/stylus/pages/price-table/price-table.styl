@@ -105,7 +105,7 @@
               display none
 
           &_price
-            width 150px
+            width 160px
             @extend .museo-500
 
             @media mobile
@@ -161,3 +161,36 @@
           height 48px
           font-size 12px
           line-height 48px
+
+    &__select-model
+      z-index 1
+      position relative
+      display flex
+      flex-direction column
+      align-items center
+
+      .select-model
+
+        &__text
+          margin-bottom 20px
+
+        &__device
+          display flex
+          margin-bottom 40px
+
+          @media mobile
+            flex-direction column
+            align-items center
+
+
+          & > *
+            display flex
+            flex-direction column
+            margin 0 5px
+
+            @media mobile
+              margin-bottom 20px
+
+            .like-h6
+              text-align center
+
