@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var a = new Date("05/10/2018"),
-        b = new Date();
+    b = new Date();
 
     if(a.setHours(0,0,0,0) <= b.setHours(0,0,0,0)) {
         return false;
@@ -312,6 +312,27 @@ function detailText() {
         var self = $(this);
         if ($(window).width() <= 990) {
             $(self).find('.defect__text').slideToggle();
+        } else {
+            if (!$('.js-detail-popup').length) {
+                var popup = '<div class="popup js-detail-popup"><div class="popup__overlay"><div class="popup__wrap"></div></div></div>';
+                $('body').append(popup);
+            }
+            var text = self.find('.defect__text').html();
+            $('.js-detail-popup').find('.popup__wrap').html(text);
         }
     });
+
+    $(document).keyup(function(e) {   // enter
+        if (e.keyCode === 27) {
+            if ($('.js-detail-popup').length) {
+                $('.js-detail-popup').remove();
+            }
+        }
+    });
+
+    $(document).on('click', '.js-detail-popup', function(e) {
+        e.preventDefault();
+        $(this).remove();
+    })
+    
 }
