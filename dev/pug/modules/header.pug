@@ -37,6 +37,8 @@ header.header
         .header__line
             .contact-line
                 .contact-line__line
+                if pageClass != 'index-page'
+                    a(href='/index.html').contact-line__link На главную
                 a(href='/index.html#contacts').contact-line__link Как к нам проехать?
                 .contact-line__social.social
                     .social__item.social__item_vk
